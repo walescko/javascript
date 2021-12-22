@@ -4,11 +4,11 @@ function CalcularPromocao(){
     var outMedicamento = document.getElementById("outMedicamento");
     var outPromocao = document.getElementById("outPromocao");
 
-    //var preco = Number(inPreco.value);
-    var promocao = Math.floor(inPreco.value*2);
-    var outMedicamento = inMedicamento.value;
+    var medicamento = inMedicamento.value;
+    var preco = Number(inPreco.value);
+    var promocao = Math.floor(preco*2);
 
-    outMedicamento.textContent = "Promocao de " + outMedicamento;
+    outMedicamento.textContent = "Promoção de " + medicamento;
     outPromocao.textContent = "Leve 2 por apenas R$ " + promocao.toFixed(2);
 
 }
