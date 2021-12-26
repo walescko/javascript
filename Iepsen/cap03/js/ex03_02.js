@@ -32,9 +32,6 @@ function calcularPeso(){
     outResposta.textContent = nome + ": seu peso ideal é " + peso.toFixed(3) + " kg.";
 }
 
-var btResultado = document.getElementById("btCalular");
-btCalcular.addEventListener("click", calcularPeso);
-
 function limparCampos(){
   
     document.getElementById("inNome").value = "";
@@ -47,6 +44,8 @@ function limparCampos(){
 
 }
 
+var btResultado = document.getElementById("btCalular");
 var btLimpar = document.getElementById("btLimpar");
+btCalcular.addEventListener("click", calcularPeso);
 btLimpar.addEventListener("click", limparCampos);
 
