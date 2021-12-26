@@ -5,19 +5,19 @@ function calcularNotas(){
     var outNotasDez = document.getElementById("outNotasDez");
 
     outNotasCem.textContent = "";
-    outNotasCinquenta = "";
-    outNotasDez = "";
+    outNotasCinquenta.textContent = "";
+    outNotasDez.textContent = "";
 
     var saque = Number(inSaque.value);
 
-    if (saque == 0 || isNaN(saque)){
+    if (saque <= 0 || isNaN(saque)){
         alert("INFORME O VALOR A SER SACADO CORRETAMENTE!");
         inSaque.focus();
         return;    
     }
 
-    if (saque %$ 10 != 0 ){
-        alert("Não é possível sacar, valor abaixo do mínimo. Notas disponíveis: R$ 10,0 R$ 50, R$ 100");
+    if (saque % 10 != 0 ){
+        alert("Não é possível sacar. Notas disponíveis: R$ 10,0 R$ 50, R$ 100");
         inSaque.focus();
         return;
     }
@@ -41,5 +41,5 @@ function calcularNotas(){
     }
 }
 
-var btExibir = document.getElementById("btExibit");
+var btExibir = document.getElementById("btExibir");
 btExibir.addEventListener("click", calcularNotas);
