@@ -48,4 +48,3 @@ var btResultado = document.getElementById("btCalular");
 var btLimpar = document.getElementById("btLimpar");
 btCalcular.addEventListener("click", calcularPeso);
 btLimpar.addEventListener("click", limparCampos);
-
