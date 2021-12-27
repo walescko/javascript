@@ -9,27 +9,26 @@ function paquimetro(){
 
     if (valorPago < 1.00) {
         outResposta.textContent = "Saldo Insuficiente, valor minimo de R$ 1,00.";
+        outTroco.textContent = "";
+        inValorPago.focus();
+        return;
     }
 
     if (valorPago >= 1.00 && valorPago < 1.75){
         troco = valorPago - 1;
         outResposta.textContent = "Tempo: 30 minutos.";
-        if (troco != 0){
-        outTroco.textContent = "Troco R$ " + troco.toFixed(2);
-        }
     } else if (valorPago >= 1.75 && valorPago < 3.00){
         troco = valorPago - 1.75;
         outResposta.textContent = "Tempo: 60 minutos";
-        if (troco != 0){
-            outTroco.textContent = "Troco R$ " + troco.toFixed(2);
-        }
     } else if (valorPago >= 3.00) {
         troco = valorPago - 3;
         outResposta.textContent = "Tempo: 120 minutos - tempo máximo";
-        if (troco != 0){
-            outTroco.textContent = "Troco R$ " + troco.toFixed(2);
-        }
     }
+
+    if (troco != 0 ){
+        outTroco.textContent = "Troco R$ " + troco.toFixed(2);
+    }
+       
 }
 
 var btExibir = document.getElementById("btExibir");
