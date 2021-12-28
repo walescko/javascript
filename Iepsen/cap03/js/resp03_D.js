@@ -11,7 +11,12 @@ function triangulo(){
     var ladoB = Number(inLadoB.value);
     var ladoC = Number(inLadoC.value); 
 
-    outResposta.textContent = "Lado A " + ladoA + "; Lado B " + ladoB + "; Lado C" + ladoC + ".";
+    if ((ladoA + ladoB > ladoC) && (ladoA + ladoC > ladoB) && (ladoB + ladoC > ladoA)){
+        outResposta.textContent = "Os lados informados podem formar um triangulo!";
+    } else {
+        outResposta.textContent = "Os valores informados dos lados não formam um triângulo.";
+    }
+    
     outTipoTriangulo.textContent = "Triangulo Teste";
 
 }
