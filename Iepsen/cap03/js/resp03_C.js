@@ -10,8 +10,6 @@ function paquimetro(){
     if (valorPago < 1.00) {
         outResposta.textContent = "Saldo Insuficiente, valor minimo de R$ 1,00.";
         outTroco.textContent = "";
-        inValorPago.focus();
-        return;
     }
 
     if (valorPago >= 1.00 && valorPago < 1.75){
