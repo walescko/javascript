@@ -13,12 +13,17 @@ function triangulo(){
 
     if ((ladoA + ladoB > ladoC) && (ladoA + ladoC > ladoB) && (ladoB + ladoC > ladoA)){
         outResposta.textContent = "Os lados informados podem formar um triangulo!";
+        if (ladoA == ladoB && ladoB == ladoC){
+            outTipoTriangulo.textContent = "E forma um triangulo equilátero.";
+        } else if (ladoA == ladoB || ladoB == ladoC || ladoA == ladoC){
+            outTipoTriangulo.textContent = "E formam um triangulo isóceles.";
+        } else {
+            outTipoTriangulo.textContent = "E forma um triangulo escaleno.";
+        }
     } else {
         outResposta.textContent = "Os valores informados dos lados não formam um triângulo.";
+        outTipoTriangulo.textContent = "";
     }
-    
-    outTipoTriangulo.textContent = "Triangulo Teste";
-
 }
 
 function limparCampos(){
