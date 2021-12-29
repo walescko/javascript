@@ -13,9 +13,14 @@ function listarNumeros(){
 
     var resposta = "Entre " + numero + " e 1: ";
 
-    for (var i = numero; i > 1 ; i--){
+    var i = numero;
+
+    // for (var i = numero; i > 1 ; i--){
+    while (i > 1){
         resposta = resposta + i + ", ";
+        i = i - 1;
     }
+
     resposta = resposta + 1 + ".";
 
     outResposta.textContent = resposta;
