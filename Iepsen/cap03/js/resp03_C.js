@@ -9,10 +9,8 @@ function paquimetro(){
 
     if (valorPago < 1.00) {
         outResposta.textContent = "Saldo Insuficiente, valor minimo de R$ 1,00.";
-        outTroco.textContent = "";
-    }
-
-    if (valorPago >= 1.00 && valorPago < 1.75){
+        troco = 0;
+    } else if(valorPago < 1.75){
         troco = valorPago - 1;
         outResposta.textContent = "Tempo: 30 minutos.";
     } else if (valorPago < 3.00){
@@ -23,7 +21,7 @@ function paquimetro(){
         outResposta.textContent = "Tempo: 120 minutos - tempo máximo";
     }
 
-    if (troco != 0 ){
+    if (troco != 0){
         outTroco.textContent = "Troco R$ " + troco.toFixed(2);
     } else {
         outTroco.textContent = "";
