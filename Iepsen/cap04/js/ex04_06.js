@@ -11,35 +11,34 @@ function verificarPrimo(){
         return;
     }
   
-    // var temDivisor = 0;
+    var temDivisor = 0;
 
-    // for (var i = 2; i <= numero/2 ; i++){
-    //     if(numero % i == 0){
-    //         temDivisor = 1;
-    //         break;
-    //     }
-    // }
-
-    // if (numero > 1 && !temDivisor){
-    //     outResposta.textContent = numero + " é primo!";
-    // } else {
-    //     outResposta.textContent = numero + " não é primo!";
-    // }
-
-    var numDivisores = 0;
-    
-    for (var i = 1; i <= numero; i++){
-        if (numero % i == 0){
-            numDivisores++;
+    for (var i = 2; i <= numero/2 ; i++){
+        if(numero % i == 0){
+            temDivisor = 1;
+            break;
         }
     }
-   
 
-    if (numDivisores != 2){
-        outResposta.textContent = numero + " Não é primo!";
+    if (numero > 1 && !temDivisor){
+        outResposta.textContent = numero + " é primo!";
     } else {
-        outResposta.textContent = numero + " É primo!";
+        outResposta.textContent = numero + " não é primo!";
     }
+
+    // var numDivisores = 0;
+    
+    // for (var i = 1; i <= numero; i++){
+    //     if (numero % i == 0){
+    //         numDivisores++;
+    //     }
+    // }
+   
+    // if (numDivisores != 2){
+    //     outResposta.textContent = numero + " Não é primo!";
+    // } else {
+    //     outResposta.textContent = numero + " É primo!";
+    // }
 }
 
 var btTestar = document.getElementById("btTestar");
