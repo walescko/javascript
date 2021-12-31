@@ -7,7 +7,7 @@ function repetirFruta(){
     let fruta = inFruta.value;
     let numero = Number(inNumero.value);
 
-    if (fruta == "" || ){
+    if (fruta == ""){
         alert("Fruta inválida.");
         inFruta.focus();
         return;
@@ -19,8 +19,14 @@ function repetirFruta(){
         return;
     }
 
+    var frutas = fruta;
 
-    outFrutas.textContent = "Teste da " + fruta + " " + numero;
+    for (var i = 2; i <= numero; i++){
+            frutas = frutas + " * " + fruta;
+    }
+
+    outFrutas.textContent = frutas;
+    
 }
 
 let btRepetir = document.getElementById("btRepetir");
