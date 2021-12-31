@@ -1,5 +1,4 @@
 function repetirFruta(){
-
     let inFruta = document.getElementById("inFruta");
     let inNumero = document.getElementById("inNumero");
     let outFrutas = document.getElementById("outFrutas");
@@ -7,7 +6,7 @@ function repetirFruta(){
     let fruta = inFruta.value;
     let numero = Number(inNumero.value);
 
-    if (fruta == ""){
+    if (fruta == ""){ //tenho que adicionar a validação de apenas letras
         alert("Fruta inválida.");
         inFruta.focus();
         return;
@@ -26,7 +25,6 @@ function repetirFruta(){
     }
 
     outFrutas.textContent = frutas;
-    
 }
 
 let btRepetir = document.getElementById("btRepetir");
