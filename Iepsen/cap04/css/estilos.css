@@ -1,7 +1,7 @@
 img.normal {float: left; height: 300px; width:300px}
 img.alta {float: left; height: 420px; width: 300px;}
-h1{border-bottom-style: inset; color:antiquewhite}
+h1{border-bottom-style: inset; color:white}
 h3{color: whitesmoke;}
-p{color: white;}
+p{color: whitesmoke;}
 pre{font-size: 1.2em;}
-body {background-color: darkgrey;}
+body {background-color: darkblue;}
