@@ -1,10 +1,10 @@
 img.normal { float: left; heigth: 300px; width: 300px;}
 img.alta { float: left; heigth: 420px; width: 300px;}
-h1 {border-bottom-style: inset;}
+h1 {border-bottom-style: inset; color: darkcyan;}
 pre {font-size: 1.2em;}
 h3{color: whitesmoke;}
-p{color: whitesmoke;}
-body {background-color: darkblue;}
+p{color:whitesmoke;}
+body {background-color: darkgrey;}
 .fonteAzul{color: blue;}
 .oculta{display: none;}
 .exibe{display: inline;}
