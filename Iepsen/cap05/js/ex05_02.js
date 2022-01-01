@@ -1,6 +1,6 @@
 let erros = [];
 
-let sorteado = Math.floor(Math.random()*50) + 1;
+let sorteado = Math.floor(Math.random()*100) + 1;
 
 const CHANCES = 6;
 
@@ -9,7 +9,7 @@ function apostarNumero(){
     let inNumero = document.getElementById("inNumero");
     let numero = Number(inNumero.value);
 
-    if (numero <= 0 || numero > 50 || isNaN(numero)){
+    if (numero <= 0 || numero > 100 || isNaN(numero)){
         alert("Informe um número válido.");
         inNumero.focus();
         return;
