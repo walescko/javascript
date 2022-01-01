@@ -6,6 +6,8 @@ function estimativaChinchilas(){
     let numeroChinchilas = Number(inNumeroChinchilas.value);
     let numeroAnos = Number(inNumeroAnos.value);
 
+    // outEstimativaChinchilas = "";
+
     if (numeroChinchilas == "" || isNaN(numeroChinchilas) || numeroChinchilas < 2 || numeroAnos == "" || isNaN(numeroAnos)){
         alert("Número inválido!");
         inNumeroChinchilas.focus();
@@ -13,14 +15,14 @@ function estimativaChinchilas(){
     }
     
     let estimativaChinchilas = numeroChinchilas;
-    let tempo = numeroAnos;
+    let saida = "";
 
-    // outEstimativaChinchilas.textContent = tempo +"º ano: " + estimativaChinchilas + "Chinchilas";
-
-    for (var i = 1; i <= tempo; i++){
-        outEstimativaChinchilas.textContent = i +"º ano: " + estimativaChinchilas + " Chinchilas";
-        estimativaChinchilas =  estimativaChinchilas + estimativaChinchilas*2;
+    for (var i = 1; i <= numeroAnos; i++){
+        saida = "\n"+ saida + i + "º ano: " + estimativaChinchilas + " Chinchilas.";
+        estimativaChinchilas =  estimativaChinchilas*3;
     }
+
+    outEstimativaChinchilas.textContent = saida;
 
 }
 
