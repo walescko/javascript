@@ -1,0 +1,14 @@
+img.normal { float: left; heigth: 300px; width: 300px;}
+img.alta { float: left; heigth: 420px; width: 300px;}
+img.media { float: right; heigth: 420px; width: 300px;}
+h1 {border-bottom-style: inset; color: white;}
+pre {font-size: 1.2em;}
+h3{color: white;}
+p{color:white;}
+body {background-color: cornflowerblue;}
+.fonteAzul{color: blue;}
+.fonteRed{color:red;}
+.fonteGreen{color:green}
+.oculta{display: none;}
+.exibe{display: inline;}
+.italico{font-style: italic;}
