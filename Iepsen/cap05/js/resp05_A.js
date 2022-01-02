@@ -59,16 +59,39 @@ function ordenarAlfabetica(){
 }
 
 function montarJogos(){
+    if (clubes.length == 0){
+        alert("Não há Clubes cadastrados");
+        return;
+    } else if (clubes.length % 2 != 0){
+        alert("Falta clube para montar jogos");
+        inClube.focus();
+        return;
+    }
 
-    document.getElementById("outLista").textContent = "Partidas Eliminatórias";
+    let listaClubes1 = clubes.slice();
+    let listaClubes2 = clubes.slice().reverse();
+
+    let partidas = "";
+    
+    for (let i = 0; i < clubes.length/2; i++){
+        partidas += listaClubes1[i] + " x " + listaClubes2[i] + "\n";
+    }
+
+    document.getElementById("outLista").textContent = "Partidas Eliminatórias\n" + partidas;
+}
+
+function limparDados(){
+    location.reload();
 }
 
 let btAdicionar = document.getElementById("btAdicionar");
 let btListar = document.getElementById("btListar");
 let btOrdemAlfabetica = document.getElementById("btOrdemAlfabetica");
 let btMontarJogos = document.getElementById("btJogos");
+let btLimpar = document.getElementById("btLimpar");
 
 btAdicionar.addEventListener("click", cadastrarClube);
 btListar.addEventListener("click", listarClubes);
 btOrdemAlfabetica.addEventListener("click", ordenarAlfabetica);
 btMontarJogos.addEventListener("click", montarJogos);
+btLimpar.addEventListener("click", limparDados);
