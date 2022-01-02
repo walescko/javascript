@@ -76,10 +76,35 @@ function resumirLista(){
 
 }
 
+function ordenarAlfabetica(){
+    if (criancas.length == 0){
+        alert("Não há crianças na lista");
+        return;
+    }
+
+    let copiaLista2 = criancas.slice();
+
+    copiaLista2.sort(function(a,b){
+        let x = a.nome.toUpperCase(),
+            y = b.nome.toUpperCase();
+            return x==y ? 0 : x > y ? 1 : -1;});
+
+    let listaAlfabetica = "";
+
+    for (let i = 0; i < criancas.length; i++){
+        listaAlfabetica += copiaLista2[i].nome + ", " + copiaLista2[i].idade + " anos\n";
+    }
+
+    document.getElementById("outLista").textContent = listaAlfabetica;
+    
+}
+
 let btAdicionar = document.getElementById("btAdicionar");
 let btListar = document.getElementById("btListar");
 let btResumir = document.getElementById("btResumir");
+let btOrdemAlfaberica = document.getElementById("btOrdemAlfaberica");
 
 btAdicionar.addEventListener("click", adicionarCriancas);
 btListar.addEventListener("click", listarCriancas);
 btResumir.addEventListener("click", resumirLista);
+btOrdemAlfaberica.addEventListener("click", ordenarAlfabetica);
