@@ -102,7 +102,7 @@ function ordenarAlfabetica(){
 let btAdicionar = document.getElementById("btAdicionar");
 let btListar = document.getElementById("btListar");
 let btResumir = document.getElementById("btResumir");
-let btOrdemAlfaberica = document.getElementById("btOrdemAlfaberica");
+let btOrdemAlfaberica = document.getElementById("btOrdemAlfabetica");
 
 btAdicionar.addEventListener("click", adicionarCriancas);
 btListar.addEventListener("click", listarCriancas);
