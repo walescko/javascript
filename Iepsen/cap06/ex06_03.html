@@ -1,0 +1,14 @@
+<script>
+
+    let palavra = prompt("Palavra: ");
+    let tamanho = palavra.length;
+
+    let inverso = palavra.charAt(tamanho-1).toUpperCase();
+
+    for (let i = tamanho-2; i>=0; i--){
+        inverso += palavra.charAt(i).toLowerCase();
+    }
+
+    alert("Palavra: " + palavra + "\nInvertida: " + inverso);
+
+</script>
