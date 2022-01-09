@@ -18,5 +18,11 @@ function gerarCracha(){
     outCracha.textContent = "Crachá: " + cracha;
 }
 
+function limparDados(){
+    location.reload();
+}
+
 let btGerar = document.getElementById("btGerar");
+let btLimpar = document.getElementById("btLimpar");
 btGerar.addEventListener("click", gerarCracha);
+btGerar.addEventListener("click", limparDados);

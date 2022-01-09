@@ -27,5 +27,11 @@ function montarDica(){
     inFruta.value = estrelas;
 }
 
-let brMontar = document.getElementById("btMontar");
+function limparDados(){
+    location.reload();
+}
+
+let btMontar = document.getElementById("btMontar");
+let btLimpar = document.getElementById("btLimpar");
 btMontar.addEventListener("click", montarDica);
+btLimpar.addEventListener("click", limparDados);
