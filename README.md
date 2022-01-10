@@ -1,3 +1,3 @@
 # javascript
 
-Arquivos de estudos de javascritp
+Arquivos de estudos de javascript/html/css
