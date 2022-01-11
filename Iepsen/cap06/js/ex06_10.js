@@ -12,7 +12,7 @@ function calcularMultaJuros(){
     let valor = Number(inValor.value);
 
     if (dataVencimento == "" || valor == 0 || isNaN(valor)){
-        alert("Dados incorretos!\n Informe os dados da conta.");
+        alert("Dados incorretos! Informe os dados da conta.");
         inDataVencimento.focus();
         return;
     }
@@ -22,7 +22,7 @@ function calcularMultaJuros(){
 
     let partes = dataVencimento.split("-");
     vencimento.setDate(Number(partes[2]));
-    vencimento.setMonth(Number(partes[1]));
+    vencimento.setMonth(Number(partes[1])-1);
     vencimento.setFullYear(Number(partes[0]));
 
     let atraso = hoje - vencimento;
@@ -49,5 +49,5 @@ btCalcular.addEventListener("click", calcularMultaJuros);
 function limparDados(){
     location.reload();
 }
-let btLimpar = document.getElementById("btLimpar");
+let btLimpar = document.getElementById("btNovaConta");
 btLimpar.addEventListener("click", limparDados);
