@@ -3,8 +3,13 @@ let inMensagem = document.getElementById("inMensagem");
 function criptografar(){
     let mensagem = inMensagem.value;
     let tamanho = mensagem.length;
-    let mensagemCriptografada = "";
 
+    if (mensagem == ""){
+        alert("Faltou a mensagem!\nDigitar a Mensagem!");
+        inMensagem.focus();
+        return;
+    }
+    
     let criptoImpar = "";
     let criptoPar = "";
 
@@ -15,9 +20,7 @@ function criptografar(){
             criptoImpar += mensagem.charAt(i);
         } 
     }
-
-    // mensagemCriptografada = criptoPar + criptoImpar;
-    
+       
     document.getElementById("outCriptografia").textContent = "Mensagem a criptografada: " + criptoPar+criptoImpar;
     
 }
@@ -26,6 +29,12 @@ function descriptografar(){
     let mensagem = inMensagem.value;
     let tamanho = mensagem.length;
     let mensagemDescriptografada = "";
+
+    if (mensagem == ""){
+        alert("Faltou a mensagem a ser criptografada!\nDigitar a Mensagem!");
+        inMensagem.focus();
+        return
+    }
 
     let metade = Math.floor(tamanho/2);
 
