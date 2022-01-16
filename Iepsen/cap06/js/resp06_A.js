@@ -1,21 +1,19 @@
 let mensagemCriptografada = "";
+let inMensagem = document.getElementById("inMensagem");
+let criptoImpar = "";
+let criptoPar = "";
 
 function criptografar(){
-    let inMensagem = document.getElementById("inMensagem");
     let outCriptografia = document.getElementById("outCriptografia");
 
     let mensagem = inMensagem.value;
     let tamanho = mensagem.length;
 
-    
-    let criptoPar = "";
-    let criptoImpar = "";
-        
     for (let i = 0 ; i <= tamanho ; i++){
         if ( i % 2 != 0 ){
-            criptoImpar = criptoImpar + mensagem.charAt(i);
-        } else {
             criptoPar = criptoPar + mensagem.charAt(i);
+        } else {
+            criptoImpar = criptoImpar + mensagem.charAt(i);
         } 
     }
 
