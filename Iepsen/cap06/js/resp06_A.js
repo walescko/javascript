@@ -1,30 +1,48 @@
-let mensagemCriptografada = "";
 let inMensagem = document.getElementById("inMensagem");
-let criptoImpar = "";
-let criptoPar = "";
 
 function criptografar(){
-    let outCriptografia = document.getElementById("outCriptografia");
-
     let mensagem = inMensagem.value;
     let tamanho = mensagem.length;
+    let mensagemCriptografada = "";
+
+    let criptoImpar = "";
+    let criptoPar = "";
 
     for (let i = 0 ; i <= tamanho ; i++){
         if ( i % 2 != 0 ){
-            criptoPar = criptoPar + mensagem.charAt(i);
+            criptoPar += mensagem.charAt(i);
         } else {
-            criptoImpar = criptoImpar + mensagem.charAt(i);
+            criptoImpar += mensagem.charAt(i);
         } 
     }
 
-    mensagemCriptografada = criptoPar + criptoImpar;
+    // mensagemCriptografada = criptoPar + criptoImpar;
     
-    outCriptografia.textContent = "Mensagem a criptografada: " + criptoPar + criptoImpar;
+    document.getElementById("outCriptografia").textContent = "Mensagem a criptografada: " + criptoPar+criptoImpar;
+    
 }
 
 function descriptografar(){
-    let inDescriptografar = document.getElementById("inDescriptografar");
+    let mensagem = inMensagem.value;
+    let tamanho = mensagem.length;
+    let mensagemDescriptografada = "";
 
+    let metade = Math.floor(tamanho/2);
+
+    if (tamanho % 2 == 0){
+        for (let i = metade; i < tamanho; i++){
+            mensagemDescriptografada += mensagem.charAt(i);
+            mensagemDescriptografada += mensagem.charAt(i - metade);
+        }
+    } else {
+        for (let i = metade; i < tamanho-1 ; i++){
+            mensagemDescriptografada += mensagem.charAt(i);
+            mensagemDescriptografada += mensagem.charAt(i - metade);
+            }
+            mensagemDescriptografada += mensagem.charAt(i);
+        }
+            
+    document.getElementById("outCriptografia").textContent = "A Mensagem original é: " + mensagemDescriptografada;
 }
 
 let btCriptografar = document.getElementById("btCriptografar");
