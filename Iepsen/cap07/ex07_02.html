@@ -1,0 +1,22 @@
+<script>
+    function calcularMedia(){
+
+        if (arguments.length == 0){
+            alert("Informe, pelo menos, uma nota!");
+            return;
+        }
+        let soma = 0;
+        let numeroNotas = arguments.length;
+
+        for (let i = 0; i < numeroNotas; i++){
+            soma += arguments[i];
+        }
+        let media = soma/numeroNotas;
+        alert("Média das Motas: " + media.toFixed(2));
+    }
+
+    calcularMedia(5, 6, 8);
+    calcularMedia(2,10);
+    calcularMedia(7.5, 10, 8, 9.5);
+    calcularMedia();
+</script>
