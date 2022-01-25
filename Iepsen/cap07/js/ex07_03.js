@@ -37,6 +37,10 @@ function classificarVeiculo(ano){
     return classificar;
 }
 
+function calcularVenda(valor, status){
+    let prVenda = (status == "Novo") ? valor * 1.08 : valor * 1.10;
+    return prVenda;
+}
 
 let btCalucular = document.getElementById("btCalcular");
 btCalucular.addEventListener("click", mostrarDados);
