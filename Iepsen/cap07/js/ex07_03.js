@@ -22,6 +22,22 @@ function mostrarDados(){
     outPrecoVenda.textContent = "Preço de Venda R$ " + precoVenda.toFixed(2);
 }
 
+function classificarVeiculo(ano){
+    let anoAtual = new Date().getFullYear();
+    let classificar;
+
+    if (ano == anoAtual){
+        classificar = "Novo";
+    } else if (ano == anoAtual - 1 || ano == anoAtual - 2){
+        classificar = "Seminovo";
+    } else {
+        classificar = "Usado";
+    }
+
+    return classificar;
+}
+
+
 let btCalucular = document.getElementById("btCalcular");
 btCalucular.addEventListener("click", mostrarDados);
 
