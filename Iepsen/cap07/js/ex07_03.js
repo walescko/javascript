@@ -42,6 +42,8 @@ function calcularVenda(valor, status){
     return prVenda;
 }
 
+
+
 let btCalucular = document.getElementById("btCalcular");
 btCalucular.addEventListener("click", mostrarDados);
 
