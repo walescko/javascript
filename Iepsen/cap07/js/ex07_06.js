@@ -1,9 +1,9 @@
 let itens = []
+let inPizza = document.getElementById("inPizza");
+let inBebida = document.getElementById("inBebida");
 
 function trocarItem(){
-    let inPizza = document.getElementById("inPizza");
-    let inBebida = document.getElementById("inBebida");
-
+    
     if (rbPizza.checked){
         inBebida.className = "oculta";
         inPizza.className = "exibe";
@@ -13,7 +13,7 @@ function trocarItem(){
     }
 }
 
-let rbPizza = document.getElementById("rbBebida");
+let rbPizza = document.getElementById("rbPizza");
 let rbBebida = document.getElementById("rbBebida");
 rbPizza.addEventListener("change", trocarItem);
 rbBebida.addEventListener("change", trocarItem);
@@ -35,37 +35,46 @@ inDetalhes.addEventListener("blur", function(){
 });
 
 inDetalhes.addEventListener("keypress", function(tecla){
-    if (tecla.key == 13){
+    if (tecla.keyCode == 13){
         adicionarItem();
     }
 });
 
 
 function adicionarItem(){
-    let inPizza = document.getElementById("inPizza");
-    let inBebida = document.getElementById("inBebida");
+    // let inPizza = document.getElementById("inPizza");
+    // let inBebida = document.getElementById("inBebida");
     let outPedido = document.getElementById("outPedido");
+    let produto = "";
 
     if (rbPizza.checked){
         let numero = inPizza.selectedIndex;
-        let produto = inPizza.options[numero].text;
+        produto = inPizza.options[numero].text;
     } else {
         let numero = inBebida.selectedIndex;
-        let produto = inBebida.options[numero].text;
+        produto = inBebida.options[numero].text;
     }
 
     let detalhes = inDetalhes.value;
     itens.push(produto + " (" + detalhes + ")");
     outPedido.textContent = itens.join("\n");
-    limparDados();
+    limparCampos();
 }
 
 let btAdicionar = document.getElementById("btAdicionar");
-brAdicionar.addEventListener("click", adicionarItem);
+btAdicionar.addEventListener("click", adicionarItem);
 
-
-function limparDados(){
-    location.reload();
+function limparCampos(){
+    rbPizza.checked = true;
+    inBebida.className = "oculta";
+    inPizza.className = "exibe";
+    inPizza.selectedIndex = 0;
+    inDetalhes.value = "";
+    rbPizza.focus();
 }
-let btLimpar = document.getElementById("btLimpar");
-btLimpar.addEventListener("click", limparDados);
+
+// function limparDados(){
+//     location.reload();
+// }
+// let btLimpar = document.getElementById("btLimpar");
+// btLimpar.addEventListener("click", limparDados);
