@@ -3,9 +3,9 @@ pre{font-size: 1.2em;}
 .oculta{display: none;}
 .exibe{display: inline;}
 .coresBrasil{color:black; background-color: red;}
-.coresPelotas{color:blue;background-color: yellow;}
+.coresCaxias{color:brown;background-color: white;}
 .coresFarroupilha{color:green;background-color: white;}
-.coresSaoPaulo{color: green;background-color: yellow;}
-.coresGremio{color:blue;background-color: black;}
-.coresCaxias{color:brown;background-color: blue;}
+.coresGremio{color:blue;background-color: white;}
 .coresJuventude{color:green;background-color: white;}
+.coresPelotas{color:blue;background-color: yellow;}
+.coresSaoPaulo{color: green;background-color: yellow;}
