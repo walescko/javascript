@@ -44,3 +44,30 @@ rbGremio.addEventListener("change", trocarClube);
 rbJuventude.addEventListener("change", trocarClube);
 rbPelotas.addEventListener("change", trocarClube);
 rbSaoPaulo.addEventListener("change", trocarClube);
+
+function verificarClube(){
+    if (localStorage.getItem("clube")){
+
+        let clube = localStorage.getItem("clube");
+
+        if (clube == "Brasil"){
+            rbBrasil.checked = true;
+        } else if (clube == "Caxias"){
+            rbCaxias.checked = true;
+        } else if (clube == "Farroupilha"){
+            rbFarroupilha.checked = true;
+        } else if (clube == "Gremio"){
+            rbGremio.checked = true; 
+        } else if (clube == "Juventude"){
+            rbJuventude.checked = true;
+        } else if (clube == "Pelotas"){
+            rbPelotas = true;
+        } else {
+            rbSaoPaulo.checked = true;
+        }
+
+        trocarClube();
+    }
+}
+
+verificarClube();
