@@ -20,7 +20,11 @@ function trocarClube(){
         clube = "Sao Paulo";
     }
 
-    divTitulo.className = "row cores" + clube;
+    if (clube != "Sao Paulo"){ 
+        divTitulo.className = "row cores" + clube;
+    } else {
+        divTitulo.className = "row coresSaoPaulo";
+    }
 
     imgClube.src = "img/" + clube.toLowerCase() + ".png";
     imgClube.className = "exibe";
