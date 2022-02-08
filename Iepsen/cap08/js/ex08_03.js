@@ -39,3 +39,18 @@ function incluirAposta(){
 let btApostar = document.getElementById("btApostar");
 btApostar.addEventListener("click", incluirAposta);
 
+function verApostaExiste(peso){
+    let existe = false;
+
+    if(localStorage.getItem("melanciaPeso")){
+        let pesos = localStorage.getItem("melanciaPeso").split(";");
+
+        if(pesos.indexOf(peso.toString())>=0){
+            existe = true;
+        }
+    }
+    return existe;
+}
+
+
+
