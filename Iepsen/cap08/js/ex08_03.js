@@ -52,5 +52,28 @@ function verApostaExiste(peso){
     return existe;
 }
 
+function mostrarApostas(){
+    let outApostas = document.getElementById("outApostas");
+
+    if(!localStorage.getItem("melanciaNome")){
+        outApostas.textContent = "";
+        return;
+    }
+
+    let nomes = localStorage.getItem("melanciaNome").split(";");
+    let pesos = localStorage.getItem("melanciaPeso").split(";");
+
+    let linhas = "";
+
+    for(let i = 0; i < nomes.length; i++){
+        linhas += nomes[i] + " - " + pesos[i] + "g \n";
+    }
+    outApostas.textContent = linhas;
+}
+
+mostrarApostas();
+
+
+
 
 
