@@ -73,7 +73,49 @@ function mostrarApostas(){
 
 mostrarApostas();
 
+function verificarVencedor(){
+    if(!localStorage.getItem("melanciaNome")){
+        alert("Não há apostas cadastradas!");
+        return;
+    }
 
+    let pesoCorreto = Number(prompt("Qual o peso correto da melancia?"));
+    if(pesoCorreto == 0 || isNaN(pesoCorreto)){
+        return;
+    }
 
+    let nomes = localStorage.getItem("melanciaNome").split(";");
+    let pesos = localStorage.getItem("melanciaPeso").split(";");
 
+    let vencedorNome = nomes[0];
+    let vencedorPeso = Number(pesos[0]);
 
+    for (let i; i < nomes.length; i++){
+        difVencedor = Math.abs(vencedorPeso - pesoCorreto);
+        difAposta = Math.abs(Number(pesos[i]) - pesoCorreto);
+
+        if(difAposta < difVencedor){
+            vencedorNome = nomes[i];
+            vencedorPeso = Number(pesos[i]);
+        }
+    }
+
+    let mensagem = "Resultado - Peso Correto: " + pesoCorreto + "g";
+    mensagem += "\n--------------------------------------";
+    mensagem += "\nVencedor: " + vencedorNome;
+    mensagem += "\nAposta: " + vencedorPeso + "g";
+    alert(mensagem);
+}
+
+let btVencedor = document.getElementById("btVencedor");
+btVencedor.addEventListener("click", verificarVencedor);
+
+function limparApostas(){
+    if (confirm("Confirma exclusão de todas as apostas?")){
+        localStorage.removeItem("melanciaNome");
+        localStorage.removeItem("melanciaPeso");
+        mostrarApostas();
+    }
+}
+let btLimpar = document.getElementById("btLimpar");
+btLimpar.addEventListener("click", limparApostas);
