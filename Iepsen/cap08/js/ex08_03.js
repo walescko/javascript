@@ -11,7 +11,7 @@ function incluirAposta(){
         return;
     }
 
-    if (varApostaExiste(peso)){
+    if (verApostaExiste(peso)){
         alert("Já realizaram essa aposta!\n Informe outro valor!")
         inPeso.focus()
         return;
