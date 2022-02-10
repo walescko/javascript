@@ -35,3 +35,16 @@ function inserirLinha(tabela, titulo, genero){
     col3.innerHTML = "<input type='checkbox'>";
 }
 
+function gravarFilme(titulo, genero){
+    if(localStorage.getItem("filmesTitulo")){
+        let filmesTitulo = localStorage.getItem("filmeTitulo") + ";" + titulo;
+        let filmesGenero = localStorage.getItem("filmeGenero") + ";" + genero;
+
+        localStorage.setItem("filmeTitulo", filmesTitulo);
+        localStorage.setItem("filmesGenero", filmesGenero);
+    } else {
+        localStorage.setItem("filmesTitulo", titulo);
+        localStorage.setItem("filmesGenero", genero);
+    }
+}
+
