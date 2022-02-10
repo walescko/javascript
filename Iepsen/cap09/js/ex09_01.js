@@ -1,5 +1,5 @@
 function adicionarTarefa(){
-    let inTarefa = document.getElementById("inTareda");
+    let inTarefa = document.getElementById("inTarefa");
 
     let tarefa = inTarefa.value;
 
@@ -54,7 +54,7 @@ btSelecionar.addEventListener("click", selecionarTarefa);
 
 function retirarSelecionada(){
     let divQuadro = document.getElementById("divQuadro");
-    let h5 = document.getElementsByTagName(h5);
+    let h5 = document.getElementsByTagName("h5");
     let numH5 = h5.length;
 
     let aux = -1;
@@ -103,3 +103,18 @@ function gravarTarefas(){
 let btGravar = document.getElementById("btGravar");
 btGravar.addEventListener("click", gravarTarefas);
 
+function recuperarTarefasSalvas(){
+    if (localStorage.getItem("tarefasDia")){
+        let tarefas = localStorage.getItem("tarefasDia").split(";");
+
+        let divQuadro = document.getElementById("divQuadro");
+
+        for (let i = 0; i < tarefas.length; i++){
+            let h5 = document.createElement("h5");
+            let texto = document.createTextNode(tarefas[i]);
+            h5.appendChild(texto);
+            divQuadro.appendChild(h5);
+        }
+    }
+}
+recuperarTarefasSalvas();
