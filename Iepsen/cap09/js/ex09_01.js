@@ -21,3 +21,33 @@ function adicionarTarefa(){
 
 let btAdicionar = document.getElementById("btAdicionar");
 btAdicionar.addEventListener("click", adicionarTarefa);
+
+function selecionarTarefa(){
+
+    let h5 = document.getElementsByTagName("h5");
+    let numH5 = h5.length;
+
+    if(numH5 == 0){
+        alert("Não há tarefas para selecionar");
+        return;
+    }
+
+    let aux = -1;
+
+    for (let i = 0; i < numH5; i++){
+        if(h5[i].className == "tarefaSelecionada"){
+            h5[i].className = "tarefaNormal";
+            aux = i;
+            break;
+        }
+    }
+
+    if (aux == numH5 - 1){
+        aux = -1;
+    }
+
+    h5[aux + 1].className = "tarefaSelecionada";
+}
+
+let btSelecionar = document.getElementById("btSelecionar");
+btSelecionar.addEventListener("click", selecionarTarefa);
