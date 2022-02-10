@@ -78,3 +78,28 @@ function retirarSelecionada(){
 
 let btRetirar = document.getElementById("btRetirar");
 btRetirar.addEventListener("click", retirarSelecionada);
+
+function gravarTarefas(){
+    let h5 = document.getElementsByTagName("h5");
+    let numH5 = h5.length;
+
+    if(numH5 == 0){
+        alert("Não há tarefas para serem salvas!");
+        return;
+    }
+
+    let tarefas = "";
+
+    for (let i = 0; i < numH5; i++){
+        tarefas += h5[i].textContent + ";";
+    }
+
+    localStorage.setItem("tarefasDia", tarefas.substr(0, tarefas.length - 1));
+    if(localStorage.getItem("tarefasDia")){
+        alert("Ok! Tarefas Salvas.");
+    }
+}
+
+let btGravar = document.getElementById("btGravar");
+btGravar.addEventListener("click", gravarTarefas);
+
