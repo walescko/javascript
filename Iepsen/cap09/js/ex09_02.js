@@ -8,14 +8,14 @@ function exibirMoedas(){
     let divMoedas = document.getElementById("divMoedas");
 
     let alt1_00 = "Moedas de Um Real";
-    let alt0_50 = "Moedas de 50 centavos";
-    let alt0_25 = "Moedas de 25 centavos";
-    let alt0_10 = "Moedas de 10 centavos";
+    let alt0_50 = "Moedas de Cinquenta Centavos";
+    let alt0_25 = "Moedas de Vinte e Cinco Centavos";
+    let alt0_10 = "Moedas de Dez Centavos";
 
     criarMoedas(num1_00, divMoedas, "1_00.jpg", alt1_00, "moeda1_00");
     criarMoedas(num0_50, divMoedas, "0_50.jpg", alt0_50, "moeda0_50");
     criarMoedas(num0_25, divMoedas, "0_25.jpg", alt0_25, "moeda0_25");
-    criarMoedas(num0_10, divMoedas, "0_10.jpg", alt0_10, "moeda1_10");
+    criarMoedas(num0_10, divMoedas, "0_10.jpg", alt0_10, "moeda0_10");
 }
 
 exibirMoedas();
@@ -52,7 +52,7 @@ function conferirSoma(){
             totalMoedas += 1;
         } else if (moedas[i].className == "moeda0_50"){
             totalMoedas += 0.50;
-        } else if (moedas[i.className == "moeda0_25"]){
+        } else if (moedas[i].className == "moeda0_25"){
             totalMoedas += 0.25;
         } else {
             totalMoedas += 0.10;
@@ -61,13 +61,14 @@ function conferirSoma(){
 
     let div = document.createElement("div");
     let h3 = document.createElement("h3");
+    let mensagem = "";
 
     if (soma == totalMoedas.toFixed(2)){
-        div.className = "alert alert -success";
-        let mensagem = "Parabéns!!! Você acertou!";
+        div.className = "alert alert-success";
+        mensagem = "Parabéns!!! Você acertou!";
     } else {
         div.className = "alert alert-danger";
-        let mensagem = "Ops... A resposta correta é " +totalMoedas.toFixed(2);
+        mensagem = "Ops... A resposta correta é " + totalMoedas.toFixed(2);
     }
 
     let texto = document.createTextNode(mensagem);
@@ -80,3 +81,6 @@ function conferirSoma(){
 
 let btConferir = document.getElementsById("btConferir");
 btConferir.addEventListener("click", conferirSoma);
+
+let btExibir = document.getElementById("btExibir");
+btExibir.addEventListener("click", function(){location.reload()});
