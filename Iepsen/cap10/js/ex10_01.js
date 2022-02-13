@@ -30,3 +30,14 @@ function adicionarAposta(){
 
 let btApostar = document.getElementById("btApostar");
 btApostar.addEventListener("click", adicionarAposta);
+
+function validarCavalo(numero){
+    let tamanho = CAVALOS.length;
+
+    if(num>= 1 && num <=tamanho){
+        return true;
+    } else {
+        return false;
+    }
+}
+
