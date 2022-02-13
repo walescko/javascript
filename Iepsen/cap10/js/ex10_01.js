@@ -41,3 +41,31 @@ function validarCavalo(numero){
     }
 }
 
+function mostrarCavalo(){
+    let outCavalo =document.getElementById("outCavalo");
+
+    if (inCavalo.value == "") {
+        outCavalo.textContent = "";
+        return;
+    }
+
+    let cavalo = Number(inCavalo.value);
+
+    if (isNaN(cavalo) || !validarCavalo(cavalo)){
+        outCavalo.textContent = "Número do Cavalo Inválido";
+        return;
+    }
+
+    let nomeCavalo = obterCavalo(cavalo);
+    let numeroApostas = contarApostas(cavalo);
+    let total = totalizarApostas(cavalo);
+
+    outCavalo.textContent = nomeCavalo + " (Apostas: " + numeroApostas;
+    outCavalo.textContent += " - R$ " + total.toFixed(2) + ")";
+}
+
+let inCavalo = document.getElementById("inCavalo");
+inCavalo.addEventListener("blur", mostrarCavalo);
+
+
+
