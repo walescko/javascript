@@ -96,3 +96,32 @@ inCavalo.addEventListener("focus", function(){
     inCavalo.value = "";
     document.getElementById("outCavalo").textContent = "";
 });
+
+function ganhadorPareo(){
+    let ganhador = Number(prompt("Nº Cavalo Ganhador: "));
+
+    if(isNaN(ganhador) || !validarCavalo(ganhador)){
+        alert("Cavalo Inválido");
+        return;
+    }
+
+    let outApostas = document.getElementById("outApostas");
+
+    let resumo = "Resultado Final no Páreo\n";
+    resumo += "----------------------\n";
+    resumo += "Nº Total de Apostas: " + apostas.length + "\n";
+    resumo += "Total Geral R$ " + totalizarGeral().toFixed(2) + "\n\n";
+    resumo += "Ganhador Nº " + ganhador + " - " + obterCavalo(ganhador) + "\n";
+    resumo += "-----------------------\n";
+    resumo += "Nº de Apostas: " + contarApostas(ganhador) + "\n";
+    resumo += "Total Apostado R$ " + totalizarApostas(ganhador).toFixed(2);
+
+    outApostas.textContent = resumo;
+    
+    btApostar.disabled = true;
+    btGanhador.disabled = true;
+    btNovo.focus();
+}
+
+let btGanhador = document.getElementById("btGanhador");
+btGanhador.addEventListener("click", ganhadorPareo);
