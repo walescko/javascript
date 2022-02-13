@@ -76,7 +76,7 @@ function reservarPoltrona(){
         return;
     }
 
-    let divPalco = document.getElementById("divPalvo");
+    let divPalco = document.getElementById("divPalco");
 
     let imgPoltrona = divPalco.getElementsByTagName("img")[poltrona - 1];
     imgPoltrona.src = "img/reservada.jpg";
@@ -92,7 +92,7 @@ btReservar.addEventListener("click", reservarPoltrona);
 
 let inPoltrona = document.getElementById("inPoltrona");
 inPoltrona.addEventListener("keypress", function(tecla){
-    if (tecla.key == 13){
+    if (tecla.keyCode == 13){
         reservarPoltrona();
     }
 });
@@ -115,6 +115,8 @@ function confirmarReserva(){
 
     for (let i = 0; i < reservadas.length; i++){
         ocupadas += reservadas[i] + ";";
+
+        let imgPoltrona = divPalco.getElementsByTagName("img")[reservadas[i]-1];
         imgPoltrona.src = "img/ocupada.jpg";
     }
 
