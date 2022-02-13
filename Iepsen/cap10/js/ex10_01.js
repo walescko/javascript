@@ -67,5 +67,32 @@ function mostrarCavalo(){
 let inCavalo = document.getElementById("inCavalo");
 inCavalo.addEventListener("blur", mostrarCavalo);
 
+function obterCavalo(numero){
+    let posicao = num-1;
+    return CAVALOS[posicao];
+}
 
+function contarApostas(numeroCavalo){
+    let contador = 0;
+    for (let i=0; i < apostas.length; i++){
+        if (apostas[i].cavalo == numeroCavalo){
+            contador++;
+        }
+    }
+    return contador;
+}
 
+function totalizarApostas(numeroCavalo){
+    let total = 0;
+    for (let i = 0; i < apostas.length; i++){
+        if(apostas[i].cavalo == numeroCavalo){
+            total = total + apostas[i].valor;
+        }
+    }
+    return total;
+}
+
+inCavalo.addEventListener("focus", function(){
+    inCavalo.value = "";
+    document.getElementById("outCavalo").textContent = "";
+});
