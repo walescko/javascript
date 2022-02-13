@@ -16,7 +16,7 @@ function adicionarAposta(){
     apostas.push({cavalo: cavalo, valor:valor});
     let lista = "Apostas Realizadas\n----------------------------------\n";
 
-    for(let i = 0); i < apostas.length;i++){
+    for(let i = 0; i < apostas.length;i++){
         lista += "Nº " + apostas[i].cavalo + " " + obterCavalo(apostas[i].cavalo);
         lista += " - R$ " + apostas[i].valor.toFixed(2) + "\n";
     }
@@ -34,7 +34,7 @@ btApostar.addEventListener("click", adicionarAposta);
 function validarCavalo(numero){
     let tamanho = CAVALOS.length;
 
-    if(num>= 1 && num <=tamanho){
+    if(numero >= 1 && numero <= tamanho){
         return true;
     } else {
         return false;
@@ -68,7 +68,7 @@ let inCavalo = document.getElementById("inCavalo");
 inCavalo.addEventListener("blur", mostrarCavalo);
 
 function obterCavalo(numero){
-    let posicao = num-1;
+    let posicao = numero-1;
     return CAVALOS[posicao];
 }
 
@@ -107,8 +107,8 @@ function ganhadorPareo(){
 
     let outApostas = document.getElementById("outApostas");
 
-    let resumo = "Resultado Final no Páreo\n";
-    resumo += "----------------------\n";
+    let resumo = "Resultado Final no Páreo\n"
+    resumo += "----------------------\n"
     resumo += "Nº Total de Apostas: " + apostas.length + "\n";
     resumo += "Total Geral R$ " + totalizarGeral().toFixed(2) + "\n\n";
     resumo += "Ganhador Nº " + ganhador + " - " + obterCavalo(ganhador) + "\n";
@@ -125,3 +125,16 @@ function ganhadorPareo(){
 
 let btGanhador = document.getElementById("btGanhador");
 btGanhador.addEventListener("click", ganhadorPareo);
+
+function totalizarGeral(){
+    let total = 0;
+    for (let i = 0; i < apostas.length; i++){
+        total = total + apostas[i].valor;
+    }
+    return total;
+}
+
+let btNovo = document.getElementById("btNovo");
+btNovo.addEventListener("click", function(){
+    location.reload();
+});
