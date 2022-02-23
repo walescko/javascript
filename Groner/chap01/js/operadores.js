@@ -33,4 +33,18 @@ document.write("true && False: " + (true && false) + "<br>")
 console.log("true || false: " + (true || false));
 document.write("true || false: " + (true || false) + "<br>")
 console.log("!true: " + (!true));
-document.write("!true: " + (!true) + "<br>")
+document.write("!true: " + (!true) + "<br><br>")
+
+console.log("5 & 1: ", (5 & 1));
+document.write("5 & 1: ", (5 & 1) + "<br>");
+console.log("5 | 1: ", (5 | 1));
+document.write("5 | 1: ", (5 | 1) + "<br>");
+console.log("~ 5: ", (~5));
+document.write("~ 5: ", (~5) + "<br>");
+console.log("5 ^ 1: ", (5^1));
+document.write("5 ^ 1: ", (5^1) + "<br>");
+console.log("5 << 1: ", (5 << 1));
+document.write("5 << 1: ", (5 << 1) + "<br>");
+console.log("5 >> 1: ", (5 >> 1));
+document.write("5 >> 1: ", (5 >> 1) + "<br><br>");
+
