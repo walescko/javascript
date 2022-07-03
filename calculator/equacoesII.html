@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilos">
     <title>Equaçõe do Segundo Grau</title>
 </head>
 <body>
@@ -13,11 +15,11 @@
     <h3>Valor do termo quadrático (a): <input type="text" id="inValorQuadratico"></h3>
     <h3>Valor do termo linear (b): <input type="text" id="inValorLinear"></h3>
     <h3>Valor do termo independente (c): <input type="text" id="inValorIndependente"></h3>
-    <input type="button" value="Raízes" id="btRaizes">
-    <input type="button" value="Vértice" id="btVertice">
-    <input type="button" value="Cruzar Y" id="btEixoY">
-    <input type="button" value="Raízes, Vértice e Eixo Y" id="btAll">
-    <input type="button" value="Limpar" id="btLimpar">
+    <input type="button" value="Raízes" class="btn btn-primary" id="btRaizes">
+    <input type="button" value="Vértice"  class="btn btn-primary" id="btVertice">
+    <input type="button" value="Cruzar Y"  class="btn btn-primary" id="btEixoY">
+    <input type="button" value="Raízes, Vértice e Eixo Y"  class="btn btn-primary" id="btAll">
+    <input type="button" value="Limpar"  class="btn btn-danger" id="btLimpar">
 
     <h3 id="outEquacao"></h3>
     <h3 id="outResolucao"></h3>
@@ -25,13 +27,13 @@
     <h3 id="outEixoY"></h3>
     <script src="js/equacaoII.js"></script>
     
-    <a href="equacoesIeII.html"><button>Voltar</button></a>
-    <a href="calculator.html"><button>Voltar Calculadora</button></a>
-    <a href="../jsIndice.html"><button>Indice</button></a>
+    <a href="equacoesIeII.html"><button class="btn btn-outline-primary">Voltar</button></a>
+    <a href="calculator.html"><button class="btn btn-outline-primary">Voltar Calculadora</button></a>
+    <a href="../jsIndice.html"><button class="btn btn-outline-primary">Indice</button></a>
 
-
-    <p>walescko</p>
-
+    <div id="WalesckoRodape">
+        &copy Walescko Loma Linda
+    </div>
 
 
 </body>
