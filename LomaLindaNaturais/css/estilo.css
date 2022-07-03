@@ -1,22 +1,38 @@
 body{
-    font-family:"Comic Sans MS", sans-serif; text-align: justify; color: #FF7733;
+    font-family:"Comic Sans MS", sans-serif; text-align: justify; color: #1c7430;
     border-color: green; border-style: solid; border-width: 2px;
     background: #f8f9fa;
-    /*padding-left: 30px; padding-right: 70px;*/
-    /*margin-left: 30px; margin-right: 30px; margin-bottom: 30px; margin-top: 30px;*/
+    padding-left: 30px; padding-right: 70px;
+    margin-left: 30px; margin-right: 30px; margin-bottom: 30px; margin-top: 30px;
 }
 
-h1 {text-align: center; color: green}
+h1{text-align: center; color: #1c7430;}
 h2 {text-align: center; color: green}
-h3 {text-align: center; color: darkgreen}
-h4 {text-align: center; color: darkgreen}
-h5 {text-align: center; color: darkgreen}
-h6 {text-align: center; color: darkgreen}
-p  {font-family: "Comic Sans MS"; text-indent: 50px;}
+h3 {text-align: center; color: green}
+h4 {text-align: center; color: green}
+h5 {text-align: center; color: green}
+h6 {text-align: center; color: green}
 
+p  {font-family: "Comic Sans MS"; text-indent: 20px;}
+
+header {position: relative }
 img.imgProg { max-width: 100%; }
+img.logotipo{max-width: 10%;}
 
-#WalesckoRodape{color:#777;text-align: center; padding: 30px 0;}
+.container{ margin: 0 auto; width: 1940px}
+.menu-opcoes ul li{ display: inline; margin-left: 20px;}
+.menu-opcoes ul{font-size: 15px}
+.menu-opcoes a{color: #003366;}
+.menu-opcoes{position: absolute; bottom: 0; right: 0;}
+
+.logotipo{ position: relative; top: 20px; left: 50px;}
+.sacola{
+    background-image: url("../img/sacola.png"); background-repeat: no-repeat; background-repeat: top right;
+    font-size: 14px;padding-right: 35px; text-align: right; width: 150px; padding-top: 8px;
+    position: absolute; top:0; right: 0;
+}
+
+#WalesckoRodape{color:#777;text-align: center; color: #155724;padding: 30px 0;}
 #LomaLindaLogo{float: left;margin 0 0 50px 50px}
 
 
