@@ -1,38 +1,66 @@
 body{
-    font-family:"Comic Sans MS", sans-serif; text-align: justify; color: #1c7430;
-    border-color: green; border-style: solid; border-width: 2px;
+    font-family: sans-serif; text-align: justify; color: #1c7430;
     background: #f8f9fa;
     padding-left: 30px; padding-right: 70px;
     margin-left: 30px; margin-right: 30px; margin-bottom: 30px; margin-top: 30px;
 }
 
-h1{text-align: center; color: #1c7430;}
-h2 {text-align: center; color: green}
+h1 {font-size: 50px; text-align: center; color: #1c7430;}
+h2 {font-size: 40px; text-align: center; color: green}
 h3 {text-align: center; color: green}
 h4 {text-align: center; color: green}
 h5 {text-align: center; color: green}
 h6 {text-align: center; color: green}
 
-p  {font-family: "Comic Sans MS"; text-indent: 20px;}
+p  {font-family: sans-serif; font-size: 20px; text-indent: 20px;}
 
-header {position: relative }
+header {position: relative;}
 img.imgProg { max-width: 100%; }
-img.logotipo{max-width: 10%;}
+img.logoTipo{max-width: 8%;}
 
 .container{ margin: 0 auto; width: 1940px}
 .menu-opcoes ul li{ display: inline; margin-left: 20px;}
 .menu-opcoes ul{font-size: 15px}
 .menu-opcoes a{color: #003366;}
 .menu-opcoes{position: absolute; bottom: 0; right: 0;}
+.menu-opcoes img{margin: 0 auto;}
+.menu-opcoes{position: absolute; bottom: 0;right: 0;}
 
-.logotipo{ position: relative; top: 20px; left: 50px;}
+.logotipo{ position: relative; top: 20px; left: 50px; clear: left}
 .sacola{
     background-image: url("../img/sacola.png"); background-repeat: no-repeat; background-repeat: top right;
     font-size: 14px;padding-right: 35px; text-align: right; width: 150px; padding-top: 8px;
     position: absolute; top:0; right: 0;
 }
 
-#WalesckoRodape{color:#777;text-align: center; color: #155724;padding: 30px 0;}
+.destaque{ margin-top: 10px;}
+
+.busca,
+.menu-departamentos{
+    background-color: #DCDCDC; font-weight: bold; text-transform: uppercase;
+    margin-right: 10px; width: 230px;
+}
+.busca h2,
+.busca input[type=search]{width: 170px;}
+.busca form,
+.menu-departamentos h2{margin: 10px;}
+.menu-departamentos li{background-color: #f8f9fa; margin-bottom: 1px; padding: 1px, 10px;}
+.menu-departamentos a{color:#333333; text-decoration: none;}
+.menu-departamentos{ text-transform:uppercase;}
+.menu-departamentos{margin-top: 10px; padding-bottom: 10px;}
+.menu-departamentos{float:left;}
+.menu-departamentos{clear:left;}
+.busca,
+.menu-departamentos{
+    background-color: #DCDCDC; font-weight: bold; text-transform: uppercase;
+    margin-right: 10px; width: 230px;
+}
+
+
+.item-menu{text-decoration: none;}
+.paragrafos p {margin-top: 25px;}
+
+#WalesckoRodape{color:#777; text-align: center; color: #155724;padding: 30px 0;}
 #LomaLindaLogo{float: left;margin 0 0 50px 50px}
 
 

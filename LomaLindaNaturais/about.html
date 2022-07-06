@@ -3,26 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>LOMA LINDA NATURAIS - SOBRE</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
-<header>
-    <h1>LOMA LINDA NATURAIS</h1>
+<div>
+    <header class="container">
+        <img src="img/LomaLindaRedeLogo.jpg" alt="LomaLinda" class="logotipo">
+        <p class="sacola">Nenhum item na sacola</p>
+        <nav class="menu-opcoes">
+            <ul>
+                <li><a href ="#">Sua Conta</a></li>
+                <li><a href ="#">Lista de Desejos</a></li>
+                <li><a href ="#">Cartão Fidelidade</a></li>
+                <li><a href ="about.html">Sobre</a></li>
+                <li><a href ="#">Ajuda</a></li>
+            </ul>
+        </nav>
 
-</header>
+    </header>
+</div>
 
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-3">
-            <figure id="LomaLindaLogo">
-                <img src="img/LomaLindaRedeLogo.jpg" alt="LogoLomaLinda" class="imgProg">
-            </figure>
-
-        </div>
-
-        <div class="col-sm-9" id="divMoedas">
+    <div>
                 <p>
                     Uma loja de produtos na cidade de Esteio, no bairro Santo Inacio.
                     Fundada em 18/02/2020, para atender o publico do Santo Inácio e também arredores.
@@ -35,15 +40,16 @@
                 <p> Venha conhecer nossa loja, que hoje está localizada no seguinte endereço:</p>
                 <p>Rua 24 de Agosto, 3199 - Bairro Liberdade.</p>
                 <p><strong>Nosso contato para tele entrega: 51 99211 8702</strong></p>
-        </div>
     </div>
 </div>
 
-<h4><a href="index.html"><button class="btn btn-outline-info">Voltar</button></a></h4>
+<h4><a href="index.html"><button class="btn btn-info">Voltar</button></a></h4>
 
-<div id="WalesckoRodape">
-    &copy Walescko Loma Linda
-</div>
+<footer>
+    <div id="WalesckoRodape">
+        &copy Walescko Loma Linda
+    </div>
+</footer>
 
 </body>
 </html>
