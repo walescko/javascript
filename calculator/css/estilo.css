@@ -1,24 +1,19 @@
 body{
-    font-family:"Comic Sans MS", sans-serif; text-align: justify; color: #FF7733;
-    border-color: green; border-style: solid; border-width: 2px;
-    background: #f8f9fa;
-    /*padding-left: 30px; padding-right: 70px;*/
-    /*margin-left: 30px; margin-right: 30px; margin-bottom: 30px; margin-top: 30px;*/
+    font-family: sans-serif; text-align: justify; color: #2d6987;
+    background: #fff3cd;
+    padding-left: 30px; padding-right: 70px;
+    margin-left: 30px; margin-right: 30px; margin-bottom: 30px; margin-top: 30px;
+
 }
 
-h1 {text-align: center; color: green}
-h2 {text-align: center; color: green}
-h3 {text-align: center; color: darkgreen}
-h4 {text-align: center; color: darkgreen}
-h5 {text-align: center; color: darkgreen}
-h6 {text-align: center; color: darkgreen}
-p  {font-family: "Comic Sans MS"; text-indent: 50px;}
+h1 {font-size: 50px; text-align: center; color: #138496;}
+h2 {font-size: 40px; text-align: center; color: #138496;}
+h3 {text-align: center; color: #269abc;}
+h4 {text-align: right; color: #269abc;}
+h5 {text-align: center; color: #269abc;}
+h6 {text-align: center; color: #269abc;}
 
-img.imgProg { max-width: 100%; }
-
-#WalesckoRodape{color:#777;text-align: center; padding: 30px 0;}
-#LomaLindaLogo{float: left;margin 0 0 50px 50px}
+p  {text-align: center; font-family: sans-serif; font-size: 30px; text-indent: 20px;}
 
 
-
-
+#WalesckoRodape{color:#777; text-align: center; color: #138496;padding: 30px 0;}

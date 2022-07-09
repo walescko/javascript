@@ -4,29 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Equaçõe do Primeiro Grau</title>
 </head>
 <body>
 
     <h1>Equações do Primeiro grau</h1>
     <h1>Equação do tipo: ax + b = 0</h1>
-    <h3>Valor do termo linear (a): <input type="text" id="inValorLinear"></h3>
-    <h3>Valor do termo independente (b): <input type="text" id="inValorIndependente"></h3>
+    <p>Valor do termo linear (a): <input type="text" class="btn btn-outline-info" id="inValorLinear"></p>
+    <p>Valor do termo independente (b): <input type="text" class="btn btn-outline-info" id="inValorIndependente"></p>
 
-    <input type="button" value="Raízes" id="btRaizes">
-    <input type="button" value="Cruzar Y" id="btEixoY">
-    <input type="button" value="Raízes e Eixo Y" id="btAll">
-    <input type="button" value="Limpar" id="btLimpar">
+    <p>
+        <input type="button" value="Raízes" class="btn btn-outline-info" id="btRaizes">
+        <input type="button" value="Cruzar Y" class="btn btn-outline-info" id="btEixoY">
+        <input type="button" value="Raízes e Eixo Y" class="btn btn-outline-info" id="btAll">
+        <input type="button" value="Limpar" class="btn btn-outline-info" id="btLimpar">
+    </p>
 
     <h3 id="outEquacao"></h3>
     <h3 id="outResolucao"></h3>
     <h3 id="outEixoY"></h3>
     <script src="js/equacaoI.js"></script>
     
-    <a href="equacoesIeII.html"><button>Voltar</button></a>
-    <a href="calculator.html"><button>Voltar Calculadora</button></a>
-    <a href="../jsIndice.html"><button>Indice</button></a>
-    <p>walescko</p>
+    <p>
+        <a href="equacoesIeII.html"><button class="btn btn-info">Voltar</button></a>
+        <a href="calculator.html"><button class="btn btn-info">Voltar Calculadora</button></a>
+        <a href="../jsIndice.html"><button class="btn btn-info">Indice</button></a>
+    </p>
+
+
+    <div id="WalesckoRodape">
+        &copy Walescko Loma Linda - 2022
+    </div>
 
 
 
