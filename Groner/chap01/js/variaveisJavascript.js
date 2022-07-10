@@ -1,4 +1,4 @@
-let num =1;
+let num = 1;
 num = 3; 
 let price = 1.5;
 let myName = "Japir Adão";

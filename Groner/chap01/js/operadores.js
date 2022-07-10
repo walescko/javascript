@@ -48,3 +48,9 @@ document.write("5 << 1: ", (5 << 1) + "<br>");
 console.log("5 >> 1: ", (5 >> 1));
 document.write("5 >> 1: ", (5 >> 1) + "<br><br>");
 
+console.log('typeof num:', typeof num);
+console.log('typeof Packt:', typeof  'Packt');
+console.log('typeof true: ',typeof true);
+conslole.log('typeof [1,2,3]:', typeof [1,2,3]);
+console.log('typeof {name:Jonh}', typeof {name:'Jonh'});
+
