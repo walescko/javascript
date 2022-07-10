@@ -54,3 +54,8 @@ console.log('typeof true: ',typeof true);
 conslole.log('typeof [1,2,3]:', typeof [1,2,3]);
 console.log('typeof {name:Jonh}', typeof {name:'Jonh'});
 
+let myObj = {name: "Jonh", age: 21};
+console.log(myObj);
+delete myObj.age;
+console.log(myObj);
+
