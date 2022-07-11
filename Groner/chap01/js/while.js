@@ -1,6 +1,7 @@
 function whileFunction(){
     let num = 2;
     let i = 0;
+    console.log('while loop');
     while (i < 10){
         console.log(num +' * ' + (i+1) + " = " + (num*(i+1)));
         i++;
