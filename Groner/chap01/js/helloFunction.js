@@ -3,4 +3,4 @@ function sayHello(){
 }
 
 let btHello = document.getElementById('btHello');
-btHello = addEventListener("click", sayHello);
+btHello.addEventListener("click", sayHello);
