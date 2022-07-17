@@ -3,5 +3,6 @@ function letUse(){
     console.log(language);
 }
 
-let btLetConst = document.getElementById('btLetConst');
+let btLetConst = document.getElementById('btLet');
 btLetConst.addEventListener("click", letUse);
+

@@ -9,14 +9,38 @@
     <title>Let and Const</title>
 </head>
 <body>
-
+<h1>Let e Const - declarações de variáveis em Javascript</h1>
+<p>
+    Javascript e conhecida por ser um linguagem fracamente tipada na hora de declarações de
+     variáveis. diferentemente de C/C++ ou Java que são consideradas linguagens fortemente tipada.
+</p>
+<p>
+    É considerada de tipagem fraca porque não precisamos declarar qual tipo primitivo é a variável, só
+    durante a execução do programa que fica mais claro que tipo é a variável.
+</p>
+<h3>Let, Const e Object - aplicação simples</h3>
     <p>
-        <input type="button" value="Let and Const exemples" class="btn btn-outline-info" id="btLetConst">
-        <input type="button" value="Let and Const Object" class="btn btn-outline-info" id="btLetConstObj">
+        <input type="button" value="Let" class="btn btn-outline-info" id="btLet">
+        <input type="button" value="Const" class="btn btn-outline-info" id="btConst">
+        <input type="button" value="Object" class="btn btn-outline-info" id="btObj">
     </p>
 
-    <script src="js/letConst.js"></script>
-    <script src="js/letConstObj.js"></script>
+    <script src="js/let.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/obj.js"></script>
+
+<h3>Escopo das variaveis</h3>
+<p>
+    Uma variável tem um escopo definido, dependendo onde forem declaradas as variáveis.
+    Se for declarada dentro de um bloco ela pertence apenas ao bloco, sendo declarada dentro
+    de uma função, ela pertence apenas a função, podendo ser usada em qualquer lugar dentro da função.
+    Se for declarada no programa, ela pode ser usada em todo o programa.
+</p>
+<p>
+    <input type="button" value="Escopo das Variáveis" class="btn btn-outline-info" id="btEscopo">
+</p>
+
+<script src="js/escopo.js"></script>
 
     <footer>
         <p>
