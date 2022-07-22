@@ -1,0 +1,14 @@
+#site{
+    width: 1000px;
+    height: 700px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: 0;
+    margin-right: auto;
+    background-color: #39b3d7;
+}
+
+#conteudo{
+    width: 1000px;
+    height: 700px;
+}
