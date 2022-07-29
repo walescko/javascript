@@ -1,4 +1,4 @@
-import {circleArea, squareArea} from "./modules/calcArea.mjs";
+import {circleArea, squareArea} from "./calcArea.js";
 
 function exitData(){
     console.log('Modulos Test');
