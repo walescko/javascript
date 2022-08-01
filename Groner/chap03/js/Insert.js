@@ -1,11 +1,11 @@
 let numbers = [0,1,2,3,4,5,6,7,8,9,10];
 
-function Inserts(){
-    console.log("Antes da inserção:");
+function Inserts(){ //metodo push - insere no final do vetor
+    console.log("Antes da inserção push:");
     Numbers();
     numbers.push(11);
     numbers.push(12,13);
-    console.log("Após inserção:");
+    console.log("Após inserção push:");
     Numbers();
 
 }
@@ -25,6 +25,18 @@ function InsertFirst(){
     console.log("Após o deslocamento e inserção no inicio:")
     Numbers();
 
+}
+
+function InsertUnshift(){ //metodo unshift - inseri no inicio do vetor
+
+    console.log("Antes da inserção unshift: ");
+    Numbers();
+
+    console.log("Após a inserção unshift:")
+    numbers.unshift(-2);
+    Numbers();
+    numbers.unshift(-3, -4);
+    Numbers();
 }
 
 function Numbers(){
