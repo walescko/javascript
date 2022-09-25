@@ -67,11 +67,24 @@ function RemovePop(){//remove elemento do final do array
 
 }
 
-function RemoveSplice(){
+function SpliceRemove(){
     console.log("Antes da remoção splice: ");
     NumbersPosition();
 
     numbers.splice(5,3);//remove três elementos a partir da posição 5
+
+    console.log("Após a remoção splice:");
+    NumbersPosition();
+
+}
+
+function SpliceRemoveAdd(){
+    console.log("Antes da remoção splice: ");
+    InsertUnshift01();
+    InsertUnshift02();
+    NumbersPosition();
+
+    numbers.splice(5,3, 0, 0, 0);//remove três elementos a partir da posição 5
 
     console.log("Após a remoção splice:");
     NumbersPosition();
@@ -107,4 +120,6 @@ btShift.addEventListener("click", RemoveShift);
 let btPop = document.getElementById("btPop");
 btPop.addEventListener("click", RemovePop);
 let btSpliceRemove = document.getElementById("btSpliceRemove");
-btSpliceRemove.addEventListener("click", RemoveSplice);
+btSpliceRemove.addEventListener("click", SpliceRemove);
+let btSpliceRemoveAdd = document.getElementById("btSpliceRemoveAdd");
+btSpliceRemoveAdd.addEventListener("click", SpliceRemoveAdd);
