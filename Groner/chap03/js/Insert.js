@@ -41,7 +41,7 @@ function InsertUnshift02() { //metodo unshift - inseri no inicio do vetor 2 elem
     console.log("Antes da inserção unshift: ");
     Numbers();
 
-    numbers.unshift(-3, -4);
+    numbers.unshift(-4, -3);
     console.log("Após a inserção unshift:")
     Numbers();
 }
@@ -54,7 +54,17 @@ function RemoveShift(){
 
     console.log("Após a remoção shift:");
     Numbers();
-    // console.log(numbers.length);
+}
+
+function RemovePop(){//remove elemento do final do array
+    console.log("Antes da remoção shift: ");
+    Numbers();
+
+    numbers.pop();
+
+    console.log("Após a remoção shift:");
+    Numbers();
+
 }
 
 function Numbers(){
@@ -76,3 +86,5 @@ let btUnShift02 = document.getElementById("btUnShift2");
 btUnShift02.addEventListener("click", InsertUnshift02);
 let btShift = document.getElementById("btShift");
 btShift.addEventListener("click", RemoveShift);
+let btPop = document.getElementById("btPop");
+btPop.addEventListener("click", RemovePop);
