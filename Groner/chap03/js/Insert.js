@@ -57,13 +57,24 @@ function RemoveShift(){
 }
 
 function RemovePop(){//remove elemento do final do array
-    console.log("Antes da remoção shift: ");
+    console.log("Antes da remoção pop: ");
     Numbers();
 
     numbers.pop();
 
-    console.log("Após a remoção shift:");
+    console.log("Após a remoção pop:");
     Numbers();
+
+}
+
+function RemoveSplice(){
+    console.log("Antes da remoção splice: ");
+    NumbersPosition();
+
+    numbers.splice(5,3);//remove três elementos a partir da posição 5
+
+    console.log("Após a remoção splice:");
+    NumbersPosition();
 
 }
 
@@ -73,6 +84,13 @@ function Numbers(){
     }
     console.log("Comprimento do array: ", numbers.length);
 }
+function NumbersPosition(){ //mostra a posição do número
+    for(let i = 0; i<numbers.length; i++) {
+        console.log("Elemento %s: %s", i, numbers[i]);
+    }
+    console.log("Comprimento do array: ", numbers.length);
+}
+
 
 let btNumbers = document.getElementById("btNumbers");
 btNumbers.addEventListener("click", Numbers);
@@ -88,3 +106,5 @@ let btShift = document.getElementById("btShift");
 btShift.addEventListener("click", RemoveShift);
 let btPop = document.getElementById("btPop");
 btPop.addEventListener("click", RemovePop);
+let btSpliceRemove = document.getElementById("btSpliceRemove");
+btSpliceRemove.addEventListener("click", RemoveSplice);
