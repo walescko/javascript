@@ -27,15 +27,22 @@ function InsertFirst(){
 
 }
 
-function InsertUnshift(){ //metodo unshift - inseri no inicio do vetor
+function InsertUnshift01() { //metodo unshift - inseri no inicio do vetor 1 elemento
 
     console.log("Antes da inserção unshift: ");
     Numbers();
 
-    console.log("Após a inserção unshift:")
     numbers.unshift(-2);
+    console.log("Após a inserção unshift:")
     Numbers();
+}
+
+function InsertUnshift02() { //metodo unshift - inseri no inicio do vetor 2 elemento
+    console.log("Antes da inserção unshift: ");
+    Numbers();
+
     numbers.unshift(-3, -4);
+    console.log("Após a inserção unshift:")
     Numbers();
 }
 
@@ -63,5 +70,9 @@ let btInsertPush = document.getElementById("btInsertPush");
 btInsertPush.addEventListener("click", Inserts);
 let btInsertFirst = document.getElementById("btInsertFirst");
 btInsertFirst.addEventListener("click", InsertFirst);
+let btUnShift01 = document.getElementById("btUnShift1");
+btUnShift01.addEventListener("click", InsertUnshift01);
+let btUnShift02 = document.getElementById("btUnShift2");
+btUnShift02.addEventListener("click", InsertUnshift02);
 let btShift = document.getElementById("btShift");
 btShift.addEventListener("click", RemoveShift);
