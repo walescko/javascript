@@ -39,10 +39,22 @@ function InsertUnshift(){ //metodo unshift - inseri no inicio do vetor
     Numbers();
 }
 
+function RemoveShift(){
+    console.log("Antes da remoção shift: ");
+    Numbers();
+
+    numbers.shift();
+
+    console.log("Após a remoção shift:");
+    Numbers();
+    // console.log(numbers.length);
+}
+
 function Numbers(){
     for(let i = 0; i<numbers.length; i++) {
         console.log(numbers[i]);
     }
+    console.log("Comprimento do array: ", numbers.length);
 }
 
 let btNumbers = document.getElementById("btNumbers");
@@ -51,3 +63,5 @@ let btInsertPush = document.getElementById("btInsertPush");
 btInsertPush.addEventListener("click", Inserts);
 let btInsertFirst = document.getElementById("btInsertFirst");
 btInsertFirst.addEventListener("click", InsertFirst);
+let btShift = document.getElementById("btShift");
+btShift.addEventListener("click", RemoveShift);
