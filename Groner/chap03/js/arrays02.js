@@ -12,6 +12,7 @@ function printArray2D(matrix){
         for(let j=0; j < matrix[i].length; j++){
             console.log(matrix[i][j]);
         }
+        console.log("Tamanho dos Arrays: %s", matrix[i].length);
     }
 }
 
@@ -19,7 +20,5 @@ function printMatrix(){
     printArray2D(averageTemp);
 }
 
-let btHelloArrays = document.getElementById("btHello");
-btHelloArrays.addEventListener("click", HelloArrays);
 let btArray2D = document.getElementById("btArray2D");
 btArray2D.addEventListener("click", printMatrix);
