@@ -36,6 +36,11 @@ function filterFunction(){
     }
 }
 
+function reduceFunction(){
+    let sumNumberss = numberss.reduce((previus, current) => previus + current);
+    console.log(sumNumberss);
+}
+
 let btEvery = document.getElementById("btEvery");
 btEvery.addEventListener("click", everyFunction);
 let btSome = document.getElementById("btSome");
@@ -46,3 +51,5 @@ let btMyMap = document.getElementById("btMyMap");
 btMyMap.addEventListener("click", myMapFunction);
 let btFilter = document.getElementById("btFilter");
 btFilter.addEventListener("click", filterFunction);
+let btReduce = document.getElementById("btReduce");
+btReduce.addEventListener("click", reduceFunction);
