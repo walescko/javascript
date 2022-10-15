@@ -29,15 +29,20 @@ function fillMethod(){
     console.log(numbersCopy);
 }
 
-function copyWithinMethod(){
-    let numbersArray = [1, 2, 3, 4, 5, 6];
-    console.log(numbersArray);
-    numbersArray.copyWithin(0,3);
-    console.log(numbersArray);
-    numbersArray = [1, 2, 3, 4, 5, 6];
-    numbersArray.copyWithin(1,3,5)
-    console.log(numbersArray);
+function copyWithinMethod1() {
+    let copyArray = [1, 2, 3, 4, 5, 6];
+    console.log(copyArray);
+    copyArray.copyWithin(0, 3);
+    console.log(copyArray);
 
+}
+
+function copyWithinMethod2(){
+    let copyArray = [1, 2, 3, 4, 5, 6];
+    console.log(copyArray);
+    copyArray.copyWithin(1,3,5)
+    console.log(copyArray);
+    
 }
 
 let btFromEvens = document.getElementById("btFromEvens");
@@ -48,5 +53,7 @@ let btArrayOf = document.getElementById("btArrayOf");
 btArrayOf.addEventListener("click", arraysOf4);
 let btFill = document.getElementById("btFill");
 btFill.addEventListener("click", fillMethod);
-let btWithin = document.getElementById("btCopyWithin");
-btWithin.addEventListener("click", copyWithinMethod);
+let btWithin1 = document.getElementById("btCopyWithin1");
+btWithin1.addEventListener("click", copyWithinMethod1);
+let btWithin2 = document.getElementById("btCopyWithin2");
+btWithin2.addEventListener("click", copyWithinMethod2);
