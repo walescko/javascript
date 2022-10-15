@@ -12,7 +12,15 @@ function fromOddsMethod(){
     }
 }
 
+function arraysOf4(){
+    let numbers4 = [1, 2, 4 ,5 , 6];
+    let numbersCopy = Array.of(...numbers4);
+    console.log(numbersCopy);
+}
+
 let btFromEvens = document.getElementById("btFromEvens");
-let brFromOdds = document.getElementById("btFromOdds");
 btFromEvens.addEventListener("click", fromEvensMethod);
+let brFromOdds = document.getElementById("btFromOdds");
 brFromOdds.addEventListener("click", fromOddsMethod);
+let btArrayOf = document.getElementById("btArrayOf");
+btArrayOf.addEventListener("click", arraysOf4);
