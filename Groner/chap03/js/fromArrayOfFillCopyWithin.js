@@ -42,7 +42,7 @@ function copyWithinMethod2(){
     console.log(copyArray);
     copyArray.copyWithin(1,3,5)
     console.log(copyArray);
-    
+
 }
 
 let btFromEvens = document.getElementById("btFromEvens");
