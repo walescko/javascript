@@ -1,26 +1,26 @@
 class Stack01{
     constructor() {
-        this.count = 0;
-        this.items ={};
+        this._count = 0;
+        this._items = {};
     }
 
     push(element){
-        this.items[this.count] = element;
-        this.count++;
+        this._items[this._count] = element;
+        this._count++;
     }
     size(){
-        return this.count;
+        return this._count;
     }
     isEmpty(){
-        return this.count === 0;
+        return this._count === 0;
     }
     pop(){
         if(this.isEmpty()){
             return undefined;
         }
-        this.count--;
-        const result = this.items[this.count];
-        delete this.items[this.count];
+        this._count--;
+        const result = this._items[this._count];
+        delete this._items[this._count];
         return result;
     }
 
@@ -28,18 +28,18 @@ class Stack01{
         if(this.isEmpty()){
             return undefined;
         }
-        return this.items[this.count-1];
+        return this._items[this._count-1];
     }
     clear(){
-        this.items = {};
-        this.count = 0;
+        this._items = {};
+        this._count = 0;
     }
     toString(){
         if(this.isEmpty()){
             return '';
         }
         let objString = '${this.items[0]}';
-        for (let i = 1; i<= this.count; i++){
+        for (let i = 1; i<= this._count; i++){
             objString = '${objString},${this.items[i]}';
         }
         return objString;
