@@ -26,6 +26,16 @@ class Stack{
     clear() {
         this.items=[];
     }
+    toString(){
+        if(this.isEmpty()){
+            return '';
+        }
+        let objString = '${this.items[0]}';
+        for (let i = 1; i<= this.count; i++){
+            objString = '${objString},${this.items[i]}';
+        }
+        return objString;
+    }
 }
 
 function stackUse(){
@@ -33,7 +43,6 @@ function stackUse(){
     console.log(stack.isEmpty());
     stack.push(5);
     stack.push(8);
-    console.log(stack);
     console.log(stack.peek());
     console.log(stack.size());
     stack.push(11);
@@ -43,6 +52,7 @@ function stackUse(){
     stack.pop();
     stack.pop();
     console.log(stack.size());
+
 
 }
 
