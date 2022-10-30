@@ -32,7 +32,7 @@ class Queue {
     }
 
     size(){
-        return this.count = this.lowerCount;
+        return this.count - this.lowerCount;
     }
 
     clear(){
@@ -43,18 +43,56 @@ class Queue {
 
     toString(){
         if(this.isEmpty()){
-            return ''
+            return '';
         }
-        let objString = `${this.items[this.lowestCount]}`;
+        let objString = `${this.items[this.lowerCount]}`;
         for(let i = this.lowerCount+1; i< this.count; i++){
-            objString = `${objString},${this.items[i]}`
+            objString = `${objString},${this.items[i]}`;
         }
         return objString;
     }
 }
+
+const queue = new Queue();
 function queueCreate(){
 
+    console.log(queue.isEmpty());
+}
+
+function enqueue(){
+    queue.enqueue("Jonh");
+    queue.enqueue("Jack");
+    console.log(queue.toString());
+}
+
+function addElement(){
+    queue.enqueue("Camilla");
+    console.log(queue.toString());
+    console.log(queue.size());
+    console.log(queue.isEmpty());
+}
+
+function removeElement(){
+    queue.dequeue();
+    console.log(queue.toString());
+    console.log(queue.size());
+    queue.dequeue();
+    console.log(queue.toString());
+    console.log(queue.size());
+
+}
+
+function peek(){
+    console.log(queue.peek());
 }
 
 let btQueueCreate = document.getElementById("btQueueCreate");
 btQueueCreate.addEventListener("click", queueCreate)
+let btEnqueue = document.getElementById("btEnqueue");
+btEnqueue.addEventListener("click", enqueue)
+let btPeek = document.getElementById("btPeek");
+btPeek.addEventListener("click", peek);
+let btAddElement = document.getElementById("btAddElement");
+btAddElement.addEventListener("click", addElement);
+let btRemoveElement = document.getElementById("btRemoveElement");
+btRemoveElement.addEventListener("click", removeElement);
