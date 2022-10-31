@@ -5,7 +5,6 @@ class Queue {
         this.items = {}
     }
 
-
     enqueue(element) { //Adiciona elementos no final da fila
         this.items[this.count] = element;
         this.count++
@@ -53,46 +52,25 @@ class Queue {
     }
 }
 
-const queue = new Queue();
 function queueCreate(){
+    const queue = new Queue();
 
     console.log(queue.isEmpty());
-}
-
-function enqueue(){
     queue.enqueue("Jonh");
     queue.enqueue("Jack");
     console.log(queue.toString());
-}
-
-function addElement(){
     queue.enqueue("Camilla");
     console.log(queue.toString());
     console.log(queue.size());
     console.log(queue.isEmpty());
-}
-
-function removeElement(){
     queue.dequeue();
     console.log(queue.toString());
     console.log(queue.size());
     queue.dequeue();
     console.log(queue.toString());
     console.log(queue.size());
-
-}
-
-function peek(){
     console.log(queue.peek());
 }
 
-let btQueueCreate = document.getElementById("btQueueCreate");
-btQueueCreate.addEventListener("click", queueCreate)
-let btEnqueue = document.getElementById("btEnqueue");
-btEnqueue.addEventListener("click", enqueue)
-let btPeek = document.getElementById("btPeek");
-btPeek.addEventListener("click", peek);
-let btAddElement = document.getElementById("btAddElement");
-btAddElement.addEventListener("click", addElement);
-let btRemoveElement = document.getElementById("btRemoveElement");
-btRemoveElement.addEventListener("click", removeElement);
+let btQueueCreate = document.getElementById("btQueue");
+btQueueCreate.addEventListener("click", queueCreate);
