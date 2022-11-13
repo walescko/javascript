@@ -57,10 +57,10 @@ class DoublyLinkedList extends LinkedList{
                     this.tail = current.prev;
                     this.tail.next = undefined;
                 } else {
-                    current - this.getElementAt(index);
+                    current = this.getElementAt(index);
                     const previous = current.prev;
                     previous.next = current.next;
-                    currente.next.prev = previous;
+                    current.next.prev = previous;
                 }
                 this.count--;
                 return current.element;
