@@ -56,6 +56,17 @@ class Set{
         otherSet.values().forEach(value => unionSet.add(value));
         return unionSet;
     }
+
+    intersection(otherSet){
+        const intersectionSet = new Set();
+        const values = this.values();
+        for (let i = 0; i < values.length; i++){
+            if (otherSet.has(values[i])){
+                intersectionSet.add(values[i]);
+            }
+        }
+        return intersectionSet;
+    }
 }
 
 function SetFunction() {
@@ -78,7 +89,7 @@ function SetFunction() {
     console.log(set.values());
 }
 
-function Union(){
+function Union() {
     const setA = new Set();
     const setB = new Set();
 
@@ -97,11 +108,36 @@ function Union(){
 
     const unionAB = setA.union(setB);
     console.log("Conjunto União A e B", unionAB.values());
-    console.log("Tamangho do conjunto União A e B: ", unionAB.size());
+    console.log("Tamanho do conjunto União A e B: ", unionAB.size());
+}
 
+function Intersection(){
+    const setA = new Set();
+    const setB = new Set();
+
+    setA.add(1);
+    setA.add(2);
+    setA.add(3);
+    console.log("Elementos do conjunto A: ", setA.values());
+    console.log("Tamanho do conjunto A: ", setA.size());
+
+    setB.add(2);
+    setB.add(3);
+    setB.add(5);
+    setB.add(6);
+    console.log("Elementos do conjunto B: ", setB.values());
+    console.log("Tamanho do conjunto B: ", setB.size());
+
+    const intersectionAB = setA.intersection(setB);
+    console.log("Conjunto Intersecção A e B", intersectionAB.values());
+    console.log("Tamanho do conjunto Intersecção A e B: ", intersectionAB.size());
 
 }
+
+
 let  btSet = document.getElementById("btSet");
 btSet.addEventListener("click", SetFunction);
 let btUnion = document.getElementById("btUnion");
 btUnion.addEventListener("click", Union);
+let btIntersection = document.getElementById("btIntersection");
+btIntersection.addEventListener("click", Intersection);
