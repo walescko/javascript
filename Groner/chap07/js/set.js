@@ -77,6 +77,21 @@ class Set{
         });
         return differenceSet;
     }
+
+    isSubsetOf(otherSet){
+        if (this.size() > otherSet.size()){
+            return false
+        }
+        let isSubset = true;
+        this.values().every(value =>{
+            if (!otherSet.has(value)){
+                isSubset = false;
+                return false;
+            }
+            return true;
+        });
+        return isSubset;
+    }
 }
 
 function SetFunction() {
@@ -169,6 +184,31 @@ function Difference(){
     console.log("Conjunto Diferença entre B e A", differenceBA.values());
     console.log("Tamanho do conjunto Diferença entre B e A: ", differenceBA.size());
 }
+function Subset(){
+    const setA = new Set();
+    const setB = new Set();
+    const setC = new Set();
+
+    setA.add(1);
+    setA.add(2);
+    console.log("Elementos do conjunto A: ", setA.values());
+    console.log("Tamanho do conjunto A: ", setA.size());
+
+    setB.add(1);
+    setB.add(2);
+    setB.add(3);
+    console.log("Elementos do conjunto B: ", setB.values());
+    console.log("Tamanho do conjunto B: ", setB.size());
+
+    setC.add(2);
+    setC.add(3);
+    setC.add(4);
+    console.log("Elementos do conjunto C: ", setC.values());
+    console.log("Tamanho do conjunto C: ", setC.size());
+
+    console.log("Conjunto A é subconjunto do conjunto B? ", setA.isSubsetOf(setB));
+    console.log("Conjunto A é subconjunto do conjunto C? ",setA.isSubsetOf(setC));
+}
 
 let  btSet = document.getElementById("btSet");
 btSet.addEventListener("click", SetFunction);
@@ -178,3 +218,5 @@ let btIntersection = document.getElementById("btIntersection");
 btIntersection.addEventListener("click", Intersection);
 let btDifference = document.getElementById("btDifference");
 btDifference.addEventListener("click", Difference);
+let btSubset = document.getElementById("btSubset");
+btSubset.addEventListener("click", Subset);
