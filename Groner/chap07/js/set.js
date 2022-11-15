@@ -4,7 +4,7 @@ class Set{
     }
 
     has(element){//verifica se o elemento está no conjunto
-        return Object.prototype.hasOwnProperty(this.items, element)
+        return Object.prototype.hasOwnProperty.call(this.items, element);
     }
 
     add(element){
@@ -49,22 +49,59 @@ class Set{
         }
         return values;
     }
+
+    union(otherSet){
+        const unionSet = new Set();
+        this.values().forEach(value => unionSet.add(value));
+        otherSet.values().forEach(value => unionSet.add(value));
+        return unionSet;
+    }
 }
 
-function SetFunction(){
+function SetFunction() {
     const set = new Set();
     set.add(1);
     console.log(set.values());
     console.log(set.has(1));
     console.log(set.size());
     set.add(2);
-    set.add(3);
-    set.add("Juao");
-    console.log(set);
+    console.log(set.values());
+    console.log(set.has(2));
     console.log(set.size());
-    set.add("Filho du Truvão");
-    console.log(set.sizeLegacy());
+    set.add(3);
+    set.delete(1);
+    console.log(set.values());
+    set.delete(2);
+    console.log(set.values());
+    set.delete(3);
+    console.log(set.size());
+    console.log(set.values());
 }
 
+function Union(){
+    const setA = new Set();
+    const setB = new Set();
+
+    setA.add(1);
+    setA.add(2);
+    setA.add(3);
+    console.log("Elementos do conjunto A: ", setA.values());
+    console.log("Tamanho do conjunto A: ", setA.size());
+
+    setB.add(3);
+    setB.add(4);
+    setB.add(5);
+    setB.add(6);
+    console.log("Elementos do conjunto B: ", setB.values());
+    console.log("Tamanho do conjunto B: ", setB.size());
+
+    const unionAB = setA.union(setB);
+    console.log("Conjunto União A e B", unionAB.values());
+    console.log("Tamangho do conjunto União A e B: ", unionAB.size());
+
+
+}
 let  btSet = document.getElementById("btSet");
 btSet.addEventListener("click", SetFunction);
+let btUnion = document.getElementById("btUnion");
+btUnion.addEventListener("click", Union);
