@@ -1,6 +1,6 @@
 body{
-    font-family: sans-serif; text-align: justify; color: #39b3d7;
-    background: #a6e1ec;
+    font-family: sans-serif; text-align: justify; color: #155724;
+    background: #b1dfbb;
 }
 
 h1 {text-align: center;}
@@ -14,11 +14,14 @@ strong {font-family: sans-serif, monospace;}
 
 footer{
     text-align: center;
-    color: #f7f7f7;
+    color: #b1dfbb;
     text-shadow: #000000 4px 4px 2px;
-    background-color: #4e555b;
-    padding: 18px 10px 2px 10px;
+    background-color: #157347;
+    padding: 10px 10px 10px 10px;
+
 }
+
+/*#WalesckoRodape{color:#39b3d7;text-align: center;}*/
 
 
 
