@@ -67,6 +67,16 @@ class Set{
         }
         return intersectionSet;
     }
+
+    diffrence(otherSet){
+        const differenceSet = new Set();
+        this.values().forEach(value =>{
+            if (!otherSet.has(value)){
+                differenceSet.add(value);
+            }
+        });
+        return differenceSet;
+    }
 }
 
 function SetFunction() {
@@ -134,6 +144,31 @@ function Intersection(){
 
 }
 
+function Difference(){
+    const setA = new Set();
+    const setB = new Set();
+
+    setA.add(1);
+    setA.add(2);
+    setA.add(3);
+    console.log("Elementos do conjunto A: ", setA.values());
+    console.log("Tamanho do conjunto A: ", setA.size());
+
+    setB.add(2);
+    setB.add(3);
+    setB.add(5);
+    setB.add(6);
+    console.log("Elementos do conjunto B: ", setB.values());
+    console.log("Tamanho do conjunto B: ", setB.size());
+
+    const differenceAB = setA.diffrence(setB);
+    console.log("Conjunto Diferença entre A e B", differenceAB.values());
+    console.log("Tamanho do conjunto Diferença entre A e B: ", differenceAB.size());
+
+    const differenceBA = setB.diffrence(setA);
+    console.log("Conjunto Diferença entre B e A", differenceBA.values());
+    console.log("Tamanho do conjunto Diferença entre B e A: ", differenceBA.size());
+}
 
 let  btSet = document.getElementById("btSet");
 btSet.addEventListener("click", SetFunction);
@@ -141,3 +176,5 @@ let btUnion = document.getElementById("btUnion");
 btUnion.addEventListener("click", Union);
 let btIntersection = document.getElementById("btIntersection");
 btIntersection.addEventListener("click", Intersection);
+let btDifference = document.getElementById("btDifference");
+btDifference.addEventListener("click", Difference);
