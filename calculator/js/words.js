@@ -1,14 +1,21 @@
-function word(){
+function word() {
     let inWord = document.getElementById("inWord");
     let word = inWord.value;
-    console.log(word);
     let wordArray = [];
     wordArray = word.split("");
-    console.log(wordArray);
-    console.log(wordArray.length);
-    console.log(typeof wordArray);
+    if (wordArray.length == 0) {
+        alert("Não foi digitado nenhum valor.");
+        clearData();
+    } else if (wordArray[0] === ' '){
+        alert("O primeiro caracter não pode ser espaço!");
+        clearData();
+    } else {
+        console.log(word);
+        console.log(wordArray);
+        console.log(wordArray.length);
+        console.log(typeof wordArray);
+    }
 }
-
 
 let btWord = document.getElementById("btWord");
 btWord.addEventListener("click", word);
