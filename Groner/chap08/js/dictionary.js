@@ -46,4 +46,60 @@ export default class Dictionary{
     values(){
         return this.keyValues().map(valuePair => valuePair.value);
     }
+
+    forEach(callBack){
+        const valuePairs = this.keyValues();
+        for (let i = 0; i < valuePairs.length; i++){
+            const result = callBackFn(valuePairs[i].key, valuePairs[i].value);
+            if (result === false){
+                break;
+            }
+        }
+    }
+
+    size(){
+        return Object.keys(this.table).length;
+    }
+    isEmpty(){
+        return this.size() === 0;
+    }
+    clear(){
+        this.table= {};
+    }
+
+    toString(){
+        if(this.isEmpty()){
+            return '';
+        }
+        const valuePairs = this.keyValues();
+        let objString = `${valuePairs[0].toString()}`;
+        for(let i = 1; i < valuePairs.length; i++){
+            objString = `${objString},${valuePairs[i].toString()}`;
+        }
+        return objString;
+     }
 }
+
+function DictionaryF(){
+    const dictionary = new Dictionary();
+    dictionary.set("Cabrita", "cabrita@email.com");
+    dictionary.set("Schordinger", "schrodinger@email.com");
+    dictionary.set("Penny", "penny@email.com");
+    dictionary.set("Penélope", "penelope@email.com");
+    dictionary.set("Outro", "outro@email.com");
+
+    console.log(dictionary.hasKey("Cabrita"));
+    console.log(dictionary.size());
+    console.log(dictionary.keys());
+    console.log(dictionary.values());
+    console.log(dictionary.keyValues());
+    console.log(dictionary.get("Penny"));
+
+    dictionary.remove("Outro");
+    console.log(dictionary.size());
+    console.log(dictionary.keys());
+    console.log(dictionary.values());
+    console.log(dictionary.keyValues());
+}
+let btDictionary = document.getElementById("btDictionary");
+btDictionary.addEventListener("click",  DictionaryF);
