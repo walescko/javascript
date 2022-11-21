@@ -4,6 +4,6 @@ class ValuePair{
         this.value = value;
     }
     toString(){
-        return `[#{this.key}: ${this.value}]´ 
+        return `[#${this.key}: ${this.value}]`
     }
 }
