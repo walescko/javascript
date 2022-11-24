@@ -1,4 +1,5 @@
-import {defaultToString} from "../util";
+import {defaultToString} from "./util.js";
+import {ValuePair} from "./valuePair.js"
 export default class Dictionary{
     constructor(toStrFn = defaultToString) {
         this.toStrFn = toStrFn;
@@ -6,7 +7,7 @@ export default class Dictionary{
     }
 
     hasKey(key){
-        return this.thable[this.toStrFn(key)] != null;
+        return this.table[this.toStrFn(key)] != null;
     }
     set(key, value){
         if(key != null && value != null){
