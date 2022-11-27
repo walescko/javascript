@@ -1,6 +1,7 @@
 import {defaultToString} from "./util.js";
 import LinkedList from "../../chap06/js/linkedList.js";
 import {ValuePair} from "./valuePair.js";
+import {HashTable} from "./hashTable.js";
 
 class HashTableSeparateChaining{
     constructor(toStrFn = defaultToString) {
@@ -29,7 +30,7 @@ class HashTableSeparateChaining{
                 this.table[position] = new LinkedList();
             }
             this.table[position].push(new ValuePair(key,value));
-            return trueValue;
+            return true;
         }
         return false
     }
@@ -42,14 +43,32 @@ class HashTableSeparateChaining{
                 if(current.element.key === key){
                     return current.element.value;
                 }
-                current = current.element.value;
+                current = current.next;
             }
         }
         return undefined;
     }
+    remove(key){
+        const position = this.hashCode(key);
+        const linkedList = this.table[position];
+        if(linkedList != null && !linkedList.isEmpty()) {
+            let current = linkedList.getHead();
+            while (current != null) {
+                if (current.element.key === key) {
+                    linkedList.remove(current.element);
+                    if (linkedList.isEmpty()) {
+                        delete this.table[position];
+                    }
+                    return true;
+                }
+                current = current.next;
+            }
+        }
+        return false;
+        }
 }
 
-function HashCollision(){
+function HashCollision() {
     const hash = new HashTableSeparateChaining();
     hash.put('Ygritte', 'ygritte@email.com');
     hash.put('Jonathan', 'jonathan@email.com');
@@ -63,7 +82,9 @@ function HashCollision(){
     hash.put('Aethelwulf', 'aethelwulf@email.com');
     hash.put('Sargeras', 'sargeras@email.com');
 
-    console.log(hash.toString());
+    console.log(hash.hashCode("Sue"));
+    console.log(hash.hashCode("Aethelwulf"));
+
 }
 
 let btHashCollision = document.getElementById("btHashCollision");
