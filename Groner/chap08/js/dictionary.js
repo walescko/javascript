@@ -36,7 +36,7 @@ export default class Dictionary{
         const valuePairs =[];
         for (const k in this.table){
             if(this.hasKey(k)){
-            if (this.hasKey[k]);
+                valuePairs.push(this.table[k]);
             }
         }
         return valuePairs;
@@ -61,7 +61,7 @@ export default class Dictionary{
     size(){
         return Object.keys(this.table).length;
     }
-    isEmpty(){
+     isEmpty(){
         return this.size() === 0;
     }
     clear(){
