@@ -1,3 +1,5 @@
+//Código fonte de Loiane Groner,
+//disponível em https://github.com/PacktPublishing/Learning-JavaScript-Data-Structures-and-Algorithms-Third-Edition
 export const Compare = {
   LESS_THAN: -1,
   BIGGER_THAN: 1,
