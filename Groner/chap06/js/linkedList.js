@@ -1,14 +1,16 @@
-import {defaultEquals} from '../util';
-import {Node} from "./models/linked-list-models";
-export default class LinkedList{
-    this.count = 0;
-    this.head = undefined;
-    this.equalsFn = equalsFn;
+import {defaultEquals} from "./util.js";
+import {Node} from "./linked-list-models.js";
 
+export default class LinkedList{
+    constructor(equalsFn = defaultEquals) {
+        this.count = 0;
+        this.head = undefined;
+        this.equalsFn = equalsFn;
+    }
     push(element){
         const node = new Node(element);
         let current;
-        if (this.head = null){
+        if (this.head == null){
             this.head = node;
         } else{
             current = this.head;
@@ -107,18 +109,6 @@ export default class LinkedList{
 
 }
 
-
-export function defaultEquals(a, b){
-    return a === b;
-}
-
-export class Node {
-    constructor(element) {
-        this.element;
-        this.next = undefined;
-    }
-}
-
-const list = new LinkedList();
-list.push(15);
-list.push(10);
+// const list = new LinkedList();
+// list.push(15);
+// list.push(10);
