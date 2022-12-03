@@ -7,7 +7,7 @@ function fibonacci(n){
 function FibonacciC(){
     let inNumber = document.getElementById("inNumber");
     let n = Number(inNumber.value);
-    console.log("O " +n + "º termo da Série de Fibonacci é: " + fibonacci(n));
+    console.log("O " + n + "º termo da Série de Fibonacci é: " + fibonacci(n));
 }
 
 let btFibonacci = document.getElementById("btFibonacci");
