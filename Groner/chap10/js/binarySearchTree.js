@@ -69,7 +69,7 @@ export default class BinarySearchTree{
 
 
 }
-function binaryTree() {
+
     const tree = new BinarySearchTree();
     tree.insert(11);
     tree.insert(7);
@@ -86,13 +86,25 @@ function binaryTree() {
     tree.insert(18);
     tree.insert(25);
     tree.insert(6);
+    tree.insert(2);
 
 
+ function binaryTreeIn() {
     const printNode = (value) => console.log(value);
-    // tree.inOrderTraverse(printNode);
-    // tree.postOrderTraverse(printNode);
+    tree.inOrderTraverse(printNode);
+ }
+ function binaryTreePre(){
+    const printNode = (value) => console.log(value);
     tree.preOrderTraverse(printNode);
 }
+function binaryTreePost(){
+    const printNode = (value) => console.log(value);
+    tree.postOrderTraverse(printNode);
+}
 
-let btBinaryTree = document.getElementById("btBinaryTree");
-btBinaryTree.addEventListener("click", binaryTree);
+let btBinaryTreeIn = document.getElementById("btBinaryTreeIn");
+btBinaryTreeIn.addEventListener("click", binaryTreeIn);
+let btBinaryTreePre = document.getElementById("btBinaryTreePre");
+btBinaryTreePre.addEventListener("click", binaryTreePre);
+let btBinaryTreePost = document.getElementById("btBinaryTreePost");
+btBinaryTreePost.addEventListener("click", binaryTreePost);
