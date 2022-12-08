@@ -30,6 +30,20 @@ export default class BinarySearchTree{
             }
         }
     }
+
+    inOrderTraverse(callbak){
+        this.inOrderTraverseNode(this.root, callbak)
+    }
+
+    inOrderTraverseNode(node, callback){
+        if(node != null){
+            this.inOrderTraverseNode(node.left, callback);
+            callback(node.key);
+            this.inOrderTraverseNode(node, callback);
+        }
+    }
+
+
 }
 function binaryTree() {
     const tree = new BinarySearchTree();
@@ -47,6 +61,9 @@ function binaryTree() {
     tree.insert(18);
     tree.insert(25);
     tree.insert(6);
+
+    const printNode = (value) => console.log(value);
+    tree.inOrderTraverse(printNode);
 }
 
 let btBinaryTree = document.getElementById("btBinaryTree");
