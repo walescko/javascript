@@ -66,6 +66,16 @@ export default class BinarySearchTree{
             callback(node.key);
         }
     }
+    min(){
+        return this.nimNode(this.root);
+    }
+    minNode(node){
+        let current = node;
+        while (current != null && current.left !=null){
+            current = current.left;
+        }
+        return current;
+    }
 
 
 }
