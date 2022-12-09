@@ -87,8 +87,6 @@ export default class BinarySearchTree{
         }
         return current;
     }
-
-
 }
 
     const tree = new BinarySearchTree();
