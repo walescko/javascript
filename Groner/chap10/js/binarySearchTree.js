@@ -87,6 +87,22 @@ export default class BinarySearchTree{
         }
         return current;
     }
+
+    search(key){
+        return this.searchNode(this.root, key);
+    }
+    searchNode(node, key){
+        if (node == null){
+            return false;
+        }
+        if (this.compareFn(key, node.key) === Compare.LESS_THAN){
+            return this.searchNode(node.left, key);
+        } else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN){
+            return this.searchNode(node.right, key);
+        } else {
+            return true;
+        }
+    }
 }
 
     const tree = new BinarySearchTree();
@@ -128,6 +144,12 @@ function binaryTreeMax(){
      console.log(tree.max());
 }
 
+function searchFunction(){
+     let keySearchS = prompt("Digite um número: ");
+     let keySearch = Number(keySearchS);
+     console.log(tree.search(keySearch) ? "Key " + keySearch + " Found" : "Key "+ keySearch + " not found");
+}
+
 
 let btBinaryTreeIn = document.getElementById("btBinaryTreeIn");
 btBinaryTreeIn.addEventListener("click", binaryTreeIn);
@@ -140,3 +162,4 @@ btBinaryTreeMin.addEventListener("click", binaryTreeMin);
 let btBinaryTreeMax = document.getElementById("btBinaryTreeMax");
 btBinaryTreeMax.addEventListener("click", binaryTreeMax);
 let btBinaryValue = document.getElementById("btBinaryTreeValue");
+btBinaryValue.addEventListener("click", searchFunction);
