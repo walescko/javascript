@@ -106,7 +106,7 @@ export default class BinarySearchTree{
     tree.insert(25);
     tree.insert(6);
     tree.insert(2);
-
+    
 
  function binaryTreeIn() {
     const printNode = (value) => console.log(value);
@@ -120,6 +120,14 @@ function binaryTreePost(){
     const printNode = (value) => console.log(value);
     tree.postOrderTraverse(printNode);
 }
+function binaryTreeMin(){
+     console.log(tree.min());
+}
+
+function binaryTreeMax(){
+     console.log(tree.max());
+}
+
 
 let btBinaryTreeIn = document.getElementById("btBinaryTreeIn");
 btBinaryTreeIn.addEventListener("click", binaryTreeIn);
@@ -127,3 +135,8 @@ let btBinaryTreePre = document.getElementById("btBinaryTreePre");
 btBinaryTreePre.addEventListener("click", binaryTreePre);
 let btBinaryTreePost = document.getElementById("btBinaryTreePost");
 btBinaryTreePost.addEventListener("click", binaryTreePost);
+let btBinaryTreeMin = document.getElementById("btBinaryTreeMin");
+btBinaryTreeMin.addEventListener("click", binaryTreeMin);
+let btBinaryTreeMax = document.getElementById("btBinaryTreeMax");
+btBinaryTreeMax.addEventListener("click", binaryTreeMax);
+let btBinaryValue = document.getElementById("btBinaryTreeValue");
