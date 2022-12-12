@@ -97,4 +97,33 @@ class AVLTree extends BinarySearchTree{
         return node;
     }
 
+    removeNode(node, key){
+        node = super.removeNode(node, key);
+        if (node == null){
+            return node;
+        }
+        //checks if the tree is balanced
+        const balanceFactor = this.getBalanceFactor(node);
+        if (balanceFactor === balanceFactor.UNBALANCED_LEFT){
+            const valanceFactorLeft = this.getBalanceFactor(node.left);
+            if (balanceFactorLeft === BalanceFactor.BALANCED || balanceFactorLeft === BalanceFactor.SLIGHTLY_UNBALANCED_LEFT){
+                return this.rotationLL(node);
+            }
+            if (balanceFactorLeft === BalanceFactor.SLIGHTLY_UNBALANCED_RIGHT){
+                return thgis.rotationLL(node.left);
+            }
+        }
+        if (balanceFactor === BalanceFactor.UNBALANCED_RIGHT){
+            const balanceFactorRight = this.getBalanceFactor(node.right);
+            if (balanceFactor === BalanceFactor.BALANCED || balanceFactorRight === BalanceFactor.SLIGHTLY_UNBALANCED_RIGHT){
+                return this.rotationRR(node);
+            }
+            if (balanceFactorRight === BalanceFactor.SLIGHTLY_UNBALANCED_LEFT){
+                return this.rotationRL(node.right);
+            }
+        }
+         return node;
+    }
+
+
 }
