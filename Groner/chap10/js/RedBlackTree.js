@@ -8,7 +8,7 @@ class RedBlackTree extends BinarySearchTree{
         this.root = null;
     }
 
-    insert(key: T){
+    insert(key){
         if (this.root == null){
             this.root = new RedBlackNode(key);
             this.root.color = Color.BLACK;
@@ -64,4 +64,25 @@ class RedBlackTree extends BinarySearchTree{
         }
         this.root.color = Colors.BLACK;
     }
+
+    rotationLL(node){
+        const tmp = node.left;
+        node.left = tmp.right;
+        if(tmp.rigth && tmp.right.key){
+            tmp.right.parent = node;
+        }
+        tmp.parent = node.parent;
+        if (!node.parent){
+            this.root = tmp;
+        } else {
+            if (node === node.parent.left){
+                node.parent.left = tmp;
+            } else {
+                node.parent.right = tmp;
+            }
+        }
+        tmp.right = node;
+        node.parent = tmp;
+    }
+    
 }
