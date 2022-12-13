@@ -84,5 +84,23 @@ class RedBlackTree extends BinarySearchTree{
         tmp.right = node;
         node.parent = tmp;
     }
-    
+    rotationRR(node){
+        const tmp = node.right;
+        node.right = tmp.left;
+        if(tmp.left && tmp.left.key){
+            tmp.left.parent = node;
+        }
+        tmp.parent = node.parent;
+        if (!node.parent){
+            this.root = tmp;
+        } else {
+            if (node === node.parent.left){
+                node.parent.left = tmp;
+            } else {
+                node.parent.right = tmp;
+            }
+        }
+        tmp.left = node;
+        node.parent.tmp;
+    }
 }
