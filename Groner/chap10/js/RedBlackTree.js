@@ -64,6 +64,7 @@ class RedBlackTree extends BinarySearchTree{
         }
         this.root.color = Colors.BLACK;
     }
+<<<<<<< HEAD
 
     rotationLL(node){
         const tmp = node.left;
@@ -103,4 +104,6 @@ class RedBlackTree extends BinarySearchTree{
         tmp.left = node;
         node.parent.tmp;
     }
+=======
+>>>>>>> a3cc3136a5359b083adeff66fa46f99274299d2c
 }
