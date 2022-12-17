@@ -46,6 +46,18 @@ export class MinHeap{
     findMinimum(){
         return this.isEmpty() ? undefined : this.heap[0];
     }
+
+    extract(){
+        if (this.isEmpty()){
+            return undefined;
+        }
+        if (this.size() === 1){
+            return this.heap.shift();
+        }
+        const removeValue = this.heap.shift();
+        this.siftDown(0);
+        return removeValue;
+    }
     
 }
 function swap(array, a ,b){
