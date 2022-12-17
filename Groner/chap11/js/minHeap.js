@@ -26,7 +26,7 @@ export class MinHeap{
         }
         return false;
     }
-    sifUp(index){
+    siftUp(index){
         let parent = this.getParentIndex(index);
         while (
             index > 0 && this.compareFn(this.heap[parent]), this.heap[index] > Compare.BIGGER_THAN
@@ -36,9 +36,37 @@ export class MinHeap{
             parent = this.getParentIndex(index);
         }
     }
+
+    size(){
+        return this.heap.length;
+    }
+    isEmpty(){
+        return.this.size()===0;
+    }
+    findMinimum(){
+        return this.isEmpty() ? undefined : this.heap[0];
+    }
+    
 }
 function swap(array, a ,b){
     const temp = array[a];
     array[a] = array[b];
     array[b] = temp;
+    // const swap = (array, a ,b) => [array[a], array[b] = array[b],array[a]]; //EMASCRIPT 2015
 }
+
+function heap01(){
+    const heap = new MinHeap();
+    heap.insert(2);
+    heap.insert(3);
+    heap.insert(4);
+    heap.insert(5);
+    heap.insert(1);
+
+    console.log("Heap size: ", heap.size());
+    console.log("Heap is empty: ", heap.isEmpty());
+    console.log("Heap min value: ", heap.findMinimum());
+}
+
+let btMinHeap = document.getElementById("btMinHeap");
+btMinHeap.addEventListener("click", heap01);
