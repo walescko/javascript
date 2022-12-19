@@ -1,4 +1,4 @@
-import {defaultCompare} from "../../chap10/js/util";
+import {Compare, defaultCompare} from "../../chap10/js/util";
 
 export class MinHeap{
     constructor(compareFn = defaultCompare) {
@@ -41,7 +41,7 @@ export class MinHeap{
         return this.heap.length;
     }
     isEmpty(){
-        return.this.size()===0;
+        return this.size()===0;
     }
     findMinimum(){
         return this.isEmpty() ? undefined : this.heap[0];
@@ -58,7 +58,20 @@ export class MinHeap{
         this.siftDown(0);
         return removeValue;
     }
-    
+    siftDown(index){
+        let element = index;
+        const left = this.getLeftIndex(index);
+        const right = this.getRightIndex(index);
+        const size = this.size();
+        if (left < size && this.compareFn(this.heap[element], this.heap[right]) > Compare.BIGGER_THAN){
+            element = right;
+        }
+        if (index !== element){
+            swap(this.heap, index, element);
+            this.siftDown(element);
+        }
+    }
+
 }
 function swap(array, a ,b){
     const temp = array[a];
@@ -67,7 +80,7 @@ function swap(array, a ,b){
     // const swap = (array, a ,b) => [array[a], array[b] = array[b],array[a]]; //EMASCRIPT 2015
 }
 
-function heap01(){
+function minHeapTest(){
     const heap = new MinHeap();
     heap.insert(2);
     heap.insert(3);
@@ -80,5 +93,15 @@ function heap01(){
     console.log("Heap min value: ", heap.findMinimum());
 }
 
-let btMinHeap = document.getElementById("btMinHeap");
-btMinHeap.addEventListener("click", heap01);
+function heapTestExtract(){//para testar função sift down
+    heap = new MinHeap();
+    for (let i = 1; i < 10; i++){
+        heap.insert(i);
+    }
+    console.log("Extract minimum: ", heap.extract());
+}
+
+let btMinHeap = document.getElementById("btMinHeapTest");
+btMinHeap.addEventListener("click",minHeapTest);
+let btMinHeapExtract = document.getElementById("btMinHeapExtract");
+btMinHeapExtract.addEventListener("click", heapTestExtract);
