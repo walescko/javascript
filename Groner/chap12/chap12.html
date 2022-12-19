@@ -5,32 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>BINARY HEAP AND SORT HEAP</title>
+    <title>GRAPH</title>
 </head>
     <body>
     <header>
-        <h1>Binary Heap and Sort Heap</h1>
-        <h2>Capítulo 11 Estrutura de Dados e Algoritmos com Javascript</h2>
+        <h1>Graph</h1>
+        <h2>Capítulo 12 - Estrutura de Dados e Algoritmos com Javascript</h2>
     </header>
     <main>
-
-        <nav class="nav-buttons">
-            <input type="button" value="Minimum Heap" class="btn btn-info" id="btMinHeapTest">
-            <input type="button" value="Extract Minimum" class="btn" id="btMinHeapExtract">
-        </nav>
-        <nav class="nav-buttons">
-            <input type="button" value="Maximum Heap" class="btn btn-info" id="btMaxHeapTest">
-            <input type="button" value="Extract Maximum" class="btn" id="btMaxHeapExtract">
-        </nav>
+        <p>
+            <b>Grafo</b>: é um modelo abstrato de uma estrutura de rede que contém <b>nós/vértices (nodes/vertice)</b> conectados por <b>arestas (edges)</b>.
+        </p>
+        <p>
+            Um grafo é composte de um conjunto de vértices e arestas.
+        </p>
+        <p>
+            Os vértices conectados por uma arestas são <b>vértices adjacentes</b>. E no <b>grau</b> de um vértice corresponde ao número de vértices adjacente.
+        </p>
+        <p>
+            Um <b>caminho (path)</b> é a sequência de vértices consecutivos. Um caminho simples não contém vértices repetidos. Um <b>ciclo</b> é um caminho simples, exceto pelo último vértice que é igual ao primeiro.
+        </p>
+        <p>
+            Um <b>grafo acíclico</b> é aquele que não tem ciclos. E um <b>grafo conectado</b> é aquele que há um caminho entre todos os pares de vértices.
+        </p>
+        <p>
+            <b>Grafo direcionado</b> é aquele que as arestas tem uma direção. <b>Grafo não direcionado</b> não tem direcionamento das arestas. Um grafo <b>fortemente conectado </b> o caminho é em ambas direções. E ainda os grafos podem ser <b>sem peso</b> ou <b> com peso.</b>
+        </p>
+        <h2>Represetando um grafo</h2>
+        <h3>A matriz de adjascências</h3>
+        <p>
+            A <b>matriz de adjascência </b> é a representação mais comum para os grafos. Cada nó é associado a um inteiro, que o índice do array (matriz). Se houber uma aresta entre um nó de índice <b style="font-family:'Nimbus Mono PS'">i</b> para um nó de índice <b style="font-family:'Nimbus Mono PS'">j</b> representamos como <b style="font-family:'Nimbus Mono PS'">array[i][j] === 1</b>, se não houver a representação fica como <b style="font-family:'Nimbus Mono PS'">array[i][j] === 0</b>.
+        </p>
+<!--        <nav class="nav-buttons">-->
+<!--            <input type="button" value="Minimum Heap" class="btn btn-info" id="btMinHeapTest">-->
+<!--            <input type="button" value="Extract Minimum" class="btn" id="btMinHeapExtract">-->
+<!--        </nav>-->
 
         <nav class="nav-buttons">
                 <a href="../groner.html"><button class="btn btn-primary">Voltar Livro</button></a>
                 <input type="button" value="clear" class="btn btn-danger" id="btClear">
         </nav>
 <!--        scripts - call-->
-        <script src="js/minHeap.js" type="module"></script>
-        <script src="js/maxHeap.js" type="module"></script>
-        <script src="js/clear.js"></script>
+        <script src="js/graph.js" type="module"></script>
+<!--        <script src="js/maxHeap.js" type="module"></script>-->
+<!--        <script src="js/clear.js"></script>-->
     </main>
 
     <footer>
