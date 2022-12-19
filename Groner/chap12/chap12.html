@@ -9,10 +9,12 @@
 </head>
     <body>
     <header>
-        <h1>Graph</h1>
-        <h2>Capítulo 12 - Estrutura de Dados e Algoritmos com Javascript</h2>
+
     </header>
     <main>
+        <h1>Graph</h1>
+        <h2>Capítulo 12 - Estrutura de Dados e Algoritmos com Javascript</h2>
+        <br>
         <p>
             <b>Grafo</b>: é um modelo abstrato de uma estrutura de rede que contém <b>nós/vértices (nodes/vertice)</b> conectados por <b>arestas (edges)</b>.
         </p>
@@ -31,16 +33,25 @@
         <p>
             <b>Grafo direcionado</b> é aquele que as arestas tem uma direção. <b>Grafo não direcionado</b> não tem direcionamento das arestas. Um grafo <b>fortemente conectado </b> o caminho é em ambas direções. E ainda os grafos podem ser <b>sem peso</b> ou <b> com peso.</b>
         </p>
+        <br><br>
         <h2>Represetando um grafo</h2>
         <h3>A matriz de adjascências</h3>
+        <br>
         <p>
             A <b>matriz de adjascência </b> é a representação mais comum para os grafos. Cada nó é associado a um inteiro, que o índice do array (matriz). Se houber uma aresta entre um nó de índice <b style="font-family:'Nimbus Mono PS'">i</b> para um nó de índice <b style="font-family:'Nimbus Mono PS'">j</b> representamos como <b style="font-family:'Nimbus Mono PS'">array[i][j] === 1</b>, se não houver a representação fica como <b style="font-family:'Nimbus Mono PS'">array[i][j] === 0</b>.
+        </p>
+        <p>
+            Uma <b>lista de adjacências</b> é uma forma de representar grafos, sendo composta de uma lista de vértices adjacentes para cada vértice do grafo. Podemos usar as seguintes estruturas para lista de vértices adjacentes: array, lista ligada, mapa hash ou dicionário.
+        </p>
+        <p>
+            Um grafo também pode ser represetando por uma <b>matriz de incidências</b>. Nesse tipo de represetação cada linha representa um vertice (<i>v</i>) e cada coluna representa uma aresta (<i>e</i> - edge). A representação entre os dois objetos usa-se um array bidimencional, sendo o vértice <i>v</i> for incidente sobre a aresta <i>e</i> temos <b style="font-family:'Nimbus Mono PS'">array[v][e]===1</b>, caso não haja a incidência será <b style="font-family:'Nimbus Mono PS'">array[v][e]===0</b>. Esse tipo de matriz é usado para economicar espaço e mémoria.
         </p>
 <!--        <nav class="nav-buttons">-->
 <!--            <input type="button" value="Minimum Heap" class="btn btn-info" id="btMinHeapTest">-->
 <!--            <input type="button" value="Extract Minimum" class="btn" id="btMinHeapExtract">-->
 <!--        </nav>-->
 
+        <br>
         <nav class="nav-buttons">
                 <a href="../groner.html"><button class="btn btn-primary">Voltar Livro</button></a>
                 <input type="button" value="clear" class="btn btn-danger" id="btClear">
