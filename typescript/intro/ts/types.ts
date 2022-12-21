@@ -20,3 +20,13 @@ items01 = [1, 2, 3];
 // items01 = ["a", "b", "c"];
 let item02: Array<number>;
 item02 = [4, 5, 6];
+
+//tuples - tupla
+let title: [number, string];
+title = [89, "A volta dos que não foram"];
+
+//enum - enumeração
+enum Colors{
+    white = "#FFF",
+    black = "#000",
+}
