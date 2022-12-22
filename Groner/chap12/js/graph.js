@@ -31,6 +31,18 @@ class Graph{
     getAdjList(){
         return this.adjList;
     }
+    toString(){
+        let s = "";
+        for (let i = 0; i < this.vertices.length; i++){
+            s += `${this.vertices[i]} ->`;
+            const neighbors = this.adjList.get(this.vertices[i]);
+            for (let j = 0; j < neighbors.length; j++){
+                s += `${neighbors[j]}`;
+            }
+            s += "\n";
+        }
+        return s;
+    }
 }
 
 function graph01(){
