@@ -40,15 +40,24 @@
         <p>
             A <b>matriz de adjascência </b> é a representação mais comum para os grafos. Cada nó é associado a um inteiro, que o índice do array (matriz). Se houber uma aresta entre um nó de índice <b style="font-family:'Nimbus Mono PS'">i</b> para um nó de índice <b style="font-family:'Nimbus Mono PS'">j</b> representamos como <b style="font-family:'Nimbus Mono PS'">array[i][j] === 1</b>, se não houver a representação fica como <b style="font-family:'Nimbus Mono PS'">array[i][j] === 0</b>.
         </p>
+
         <p>
             Uma <b>lista de adjacências</b> é uma forma de representar grafos, sendo composta de uma lista de vértices adjacentes para cada vértice do grafo. Podemos usar as seguintes estruturas para lista de vértices adjacentes: array, lista ligada, mapa hash ou dicionário.
         </p>
+
+        <h3>Matriz de Incidências</h3>
         <p>
             Um grafo também pode ser represetando por uma <b>matriz de incidências</b>. Nesse tipo de represetação cada linha representa um vertice (<i>v</i>) e cada coluna representa uma aresta (<i>e</i> - edge). A representação entre os dois objetos usa-se um array bidimencional, sendo o vértice <i>v</i> for incidente sobre a aresta <i>e</i> temos <b style="font-family:'Nimbus Mono PS'">array[v][e]===1</b>, caso não haja a incidência será <b style="font-family:'Nimbus Mono PS'">array[v][e]===0</b>. Esse tipo de matriz é usado para economicar espaço e mémoria.
         </p>
+
+        <h3>Percorrendo Grafos</h3>
+        <p><b>Breadth-First Search - Busca em Largura:</b>Armazena os vértices em uma fila, os vértices não explorados mais antigos serão explorados antes.</p>
+        <p><b>Depth-First Search - Busca em Profundidade:</b>Armazena os vértices em uma pilha, os vértices serão explorados ao longo de um caminho, visitando um novo vértice adjacente se houver um disponível.</p>
+
+        <p>Nos exemplos usaremos a seguinte notação em cores para indicar o status do vértice, cada algoritmo deve passar no máximo duas vezes em cada vértice.</p>
         <nav class="nav-buttons">
             <input type="button" value="Graph" class="btn btn-info" id="btGraph">
-<!--            <input type="button" value="Extract Minimum" class="btn" id="btMinHeapExtract">-->
+            <input type="button" value="Breadth-First Search" class="btn" id="btBFS">
         </nav>
 
         <br>
@@ -58,6 +67,7 @@
         </nav>
 <!--        scripts - call-->
         <script src="js/graph.js" type="module"></script>
+        <script src="js/breathFirstSearch.js" type="module"></script>
         <script src="js/clear.js"></script>
 
     </main>
