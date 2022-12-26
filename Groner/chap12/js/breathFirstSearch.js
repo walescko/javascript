@@ -1,16 +1,4 @@
-const Colors = {
-    WHITE: 0,
-    GREY: 1,
-    BLACK: 2
-};
-
-const initializedColor = vertices => {
-    const color ={};
-    for (let i = 0; i < vertices.length; i++){
-        color[vertices[i]] = Colors.WHITE;
-    }
-    return color;
-};
+import {initializedColor} from "./colors";
 
 export const breathFirstSearch = (graph, starVertex, callback) => {
     const vertices = graph.getVertices();
@@ -21,7 +9,7 @@ export const breathFirstSearch = (graph, starVertex, callback) => {
     while (!queue.isEmpty()){
         const u = queue.dequeue();
         const neigbors = adjList.get(u);
-        color[u] = Color.GREY;
+        color[u] = Colors.GREY;
         for (let i = 0; i < neigbors.length; i++){
             const w = neigbors[i];
             if (color[w] === Colors.WHITE){

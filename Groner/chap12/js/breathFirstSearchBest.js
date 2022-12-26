@@ -1,16 +1,4 @@
-const Colors = {
-    WHITE: 0,
-    GREY: 1,
-    BLACK: 2
-};
-
-const initializedColor = vertices => {
-    const color ={};
-    for (let i = 0; i < vertices.length; i++){
-        color[vertices[i]] = Colors.WHITE;
-    }
-    return color;
-};
+import {initializedColor} from "./colors";
 
 const BFS = (graph, starVertex) => {
     const vertices = graph.getVertices();
@@ -44,3 +32,20 @@ const BFS = (graph, starVertex) => {
         predecessors
     };
 };
+
+const fromVertex = myVertices[0];
+for (let i = 1; i < myVertices.length; i++){
+    const toVertex = myVertices[i];
+    const path = new Stack();
+    for (let v = toVertex;
+         v!==fromVertex;
+         v = shortesPathA.predecessors[v]){
+        path.push(v);
+    }
+    path.push(fromVertex);
+    let s = path.pop();
+    while (!path.isEmpty());
+    s += " - " + path.pop();
+}
+console.log(s);
+
