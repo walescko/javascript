@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GRAPH</title>
+</head>
+    <body>
+    <header>
+
+    </header>
+    <main>
+        <h1>Graph</h1>
+        <h2>Capítulo 12 - Estrutura de Dados e Algoritmos com Javascript</h2>
+        <br>
+        <p>
+            <b>Grafo</b>: é um modelo abstrato de uma estrutura de rede que contém <b>nós/vértices (nodes/vertice)</b> conectados por <b>arestas (edges)</b>.
+        </p>
+        <p>
+            Um grafo é composte de um conjunto de vértices e arestas.
+        </p>
+        <p>
+            Os vértices conectados por uma arestas são <b>vértices adjacentes</b>. E no <b>grau</b> de um vértice corresponde ao número de vértices adjacente.
+        </p>
+        <p>
+            Um <b>caminho (path)</b> é a sequência de vértices consecutivos. Um caminho simples não contém vértices repetidos. Um <b>ciclo</b> é um caminho simples, exceto pelo último vértice que é igual ao primeiro.
+        </p>
+        <p>
+            Um <b>grafo acíclico</b> é aquele que não tem ciclos. E um <b>grafo conectado</b> é aquele que há um caminho entre todos os pares de vértices.
+        </p>
+        <p>
+            <b>Grafo direcionado</b> é aquele que as arestas tem uma direção. <b>Grafo não direcionado</b> não tem direcionamento das arestas. Um grafo <b>fortemente conectado </b> o caminho é em ambas direções. E ainda os grafos podem ser <b>sem peso</b> ou <b> com peso.</b>
+        </p>
+        <br><br>
+        <h2>Represetando um grafo</h2>
+        <h3>A matriz de adjascências</h3>
+        <br>
+        <p>
+            A <b>matriz de adjascência </b> é a representação mais comum para os grafos. Cada nó é associado a um inteiro, que o índice do array (matriz). Se houber uma aresta entre um nó de índice <b style="font-family:'Nimbus Mono PS'">i</b> para um nó de índice <b style="font-family:'Nimbus Mono PS'">j</b> representamos como <b style="font-family:'Nimbus Mono PS'">array[i][j] === 1</b>, se não houver a representação fica como <b style="font-family:'Nimbus Mono PS'">array[i][j] === 0</b>.
+        </p>
+
+        <p>
+            Uma <b>lista de adjacências</b> é uma forma de representar grafos, sendo composta de uma lista de vértices adjacentes para cada vértice do grafo. Podemos usar as seguintes estruturas para lista de vértices adjacentes: array, lista ligada, mapa hash ou dicionário.
+        </p>
+
+        <h3>Matriz de Incidências</h3>
+        <p>
+            Um grafo também pode ser represetando por uma <b>matriz de incidências</b>. Nesse tipo de represetação cada linha representa um vertice (<i>v</i>) e cada coluna representa uma aresta (<i>e</i> - edge). A representação entre os dois objetos usa-se um array bidimencional, sendo o vértice <i>v</i> for incidente sobre a aresta <i>e</i> temos <b style="font-family:'Nimbus Mono PS'">array[v][e]===1</b>, caso não haja a incidência será <b style="font-family:'Nimbus Mono PS'">array[v][e]===0</b>. Esse tipo de matriz é usado para economicar espaço e mémoria.
+        </p>
+
+        <h3>Percorrendo Grafos</h3>
+        <p><b>Breadth-First Search - Busca em Largura:</b>Armazena os vértices em uma fila, os vértices não explorados mais antigos serão explorados antes.</p>
+        <p><b>Depth-First Search - Busca em Profundidade:</b>Armazena os vértices em uma pilha, os vértices serão explorados ao longo de um caminho, visitando um novo vértice adjacente se houver um disponível.</p>
+
+        <p>Nos exemplos usaremos a seguinte notação em cores para indicar o status do vértice, cada algoritmo deve passar no máximo duas vezes em cada vértice.</p>
+        <nav class="nav-buttons">
+            <input type="button" value="Graph" class="btn btn-info" id="btGraph">
+            <input type="button" value="Breadth-First Search" class="btn" id="btBFS">
+        </nav>
+
+        <br>
+        <nav class="nav-buttons">
+                <a href="../groner.html"><button class="btn btn-primary">Voltar Livro</button></a>
+                <input type="button" value="clear" class="btn btn-danger" id="btClear">
+        </nav>
+<!--        scripts - call-->
+        <script src="js/graph.js" type="module"></script>
+        <script src="js/breathFirstSearch.js" type="module"></script>
+        <script src="js/clear.js"></script>
+
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy Walescko Loma Linda - 2022</p>
+        </div>
+    </footer>
+
+    </body>
+</html>
