@@ -1,4 +1,5 @@
 import {Compare, defaultCompare, swap} from "./util";
+import {createNonSortedArray} from "./bubbleSortBest";
 
 
 function  selectionSort(array, compareFn = defaultCompare()){
@@ -16,3 +17,8 @@ function  selectionSort(array, compareFn = defaultCompare()){
     }
         return array;
 };
+
+let array = createNonSortedArray(5);
+console.log(array.join());
+array = selectionSort(array);
+console.log(array.join());
