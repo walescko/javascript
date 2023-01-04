@@ -1,6 +1,5 @@
 import {Compare, defaultCompare, swap} from "./util";
-import {createNonSortedArray} from "./bubbleSortBest";
-
+import {createNonSortedArray} from "./createNonSortedArray";
 
 function  selectionSort(array, compareFn = defaultCompare()){
     const {length} = array;
