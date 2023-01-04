@@ -7,7 +7,7 @@ function  selectionSort(array, compareFn = defaultCompare()){
     let indexMin;
     for(let i = 0; i < length; i++){
         for (let j = 0; j < length; j++){
-            if (compareFnarray([indexMin], array[j]) === Compare.BIGGER_THAN){
+            if (compareFn(array[indexMin], array[j]) === Compare.BIGGER_THAN){
                 indexMin = j;
             }
         }
@@ -16,7 +16,7 @@ function  selectionSort(array, compareFn = defaultCompare()){
         }
     }
         return array;
-};
+}
 
 let array = createNonSortedArray(5);
 console.log(array.join());
