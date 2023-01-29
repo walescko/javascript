@@ -30,3 +30,22 @@ enum Colors{
     white = "#FFF",
     black = "#000",
 }
+
+//any - any type, NOT RECOMENDED
+let thing: any;
+thing = [2, 3]
+//void - void return
+function logger():void{
+    console.log("foo");
+}
+// null/undefined, NÃO USAR COMO TIPO PRIMITIVO
+let variable1 : string | undefined;
+
+// never - Nunca dá retorno
+function error(): never{
+    throw new Error("error");
+}
+
+//object - tudo aquilo que não é das anteriores
+let cart: object
+cart = {key = "foo"}
