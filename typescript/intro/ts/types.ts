@@ -48,4 +48,4 @@ function error(): never{
 
 //object - tudo aquilo que não é das anteriores
 let cart: object
-cart = {key = "foo"}
+cart = {key: "foo"}
