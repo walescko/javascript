@@ -1,11 +1,26 @@
 {
   "name": "modulo01",
   "version": "1.0.0",
-  "description": "",
+  "description": "study",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Walescko",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walescko/javascript.git"
+  },
+  "keywords": [
+    "#javascript",
+    "#typescript"
+  ],
+  "bugs": {
+    "url": "https://github.com/walescko/javascript/issues"
+  },
+  "homepage": "https://github.com/walescko/javascript#readme",
+  "dependencies": {
+    "typescript": "^4.9.4"
+  }
 }
