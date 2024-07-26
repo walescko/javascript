@@ -5,4 +5,11 @@ function mostrarPromocao(){
     let outEntrada = document.getElementById("outEntrada");
     let outParcela = document.getElementById("outParcela");
 
+    let veiculo = inVeiculo.value;
+    let preco = Number(inPreco.value);
+
+    let entrada = preco * 0.50;
+    let parcela = (preco * 0.50) / 12;
+
+
 }
