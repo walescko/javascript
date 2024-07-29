@@ -11,5 +11,10 @@ function mostrarPromocao(){
     let entrada = preco * 0.50;
     let parcela = (preco * 0.50) / 12;
 
-
+    outVeiculo.textContent = "Promoção: " + veiculo;
+    outEntrada.textContent = "Entrada de R$ " + entrada.toFixed(2);
+    outParcela.textContent = "12x de R$ " + parcela.toFixed(2);
 }
+
+let btVerPromocao = document.getElementById("btVerPromocao");
+btVerPromocao.addEventListener("click", mostrarPromocao);
