@@ -1,0 +1,13 @@
+img {
+    float: left; height: 300px; width: 300px;
+    margin-right: 2%;
+    margin-left: 1%;
+}
+
+h1 {
+    border-bottom-style: inset;
+}
+
+/* body {
+    background-color: aquamarine;
+} */
