@@ -8,14 +8,20 @@ function calcularMedia(){
     let outMedia = document.getElementById("outMedia")
 
     let nome = inNome.value 
-    let nota01 = inNota01.value
-    let nota02 = inNota02.value
+    let nota01 = Number(inNota01.value)
+    let nota02 = Number(inNota02.value)
 
     let media = (nota01 + nota02)/2
+    
+    outMedia.textContent = "Média das notas: " + media.toFixed(2)
 
     if (media >= 7) {
         outSituacao.textContent = "Parabéns " + nome + "! Você foi aprovado(a)"
         outSituacao.style.color = "blue"
+    } else if (media >= 4) {
+        outSituacao.textContent = "Atenção " + nome + "! Você está em exame!"
+        outSituacao.style.color = "orange"
+
     } else {
         outSituacao.textContent = "Ops " + nome + "... Você foi repovado"
         outSituacao.style.color = "red"
