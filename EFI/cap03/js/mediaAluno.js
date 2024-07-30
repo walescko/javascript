@@ -1,4 +1,6 @@
 function calcularMedia(){
+// o git não atualiza.
+
     let inNome = document.getElementById("inNome")
     let inNota01 = document.getElementById("inNota01")
     let inNota02 = document.getElementById("inNota02")
